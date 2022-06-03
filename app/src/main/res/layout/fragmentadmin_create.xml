@@ -95,15 +95,19 @@
             android:maxLength="20" />
     </com.google.android.material.textfield.TextInputLayout>
 
+
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/admincreate"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:layout_marginBottom="324dp"
+        android:layout_height="70dp"
         android:layout_margin="10dp"
-        android:textColor="@color/white"
-        android:background="@drawable/fragmentuttoncaolor"
+        android:layout_marginBottom="324dp"
+        android:background="@drawable/btnadmin"
+        android:backgroundTint="@color/color_bg_Clibrary"
         android:text="@string/Create"
-        android:textSize="24sp"
-        />
+        android:textColor="@color/white"
+        android:textSize="24sp" />
+
+
 </LinearLayout>

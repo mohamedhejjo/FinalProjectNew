@@ -6,7 +6,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".fragment.FragmentuserCreate">
-
     <de.hdodenhof.circleimageview.CircleImageView
         android:layout_width="200dp"
         android:layout_height="100dp"
@@ -94,18 +93,19 @@
             android:maxLength="20" />
     </com.google.android.material.textfield.TextInputLayout>
 
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/usercreate"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:layout_marginBottom="324dp"
+        android:layout_height="70dp"
         android:layout_margin="10dp"
-        android:textColor="@color/white"
-        android:background="@drawable/fragmentuttoncaolor"
+        android:layout_marginBottom="324dp"
+        android:background="@drawable/btnadmin"
+        android:backgroundTint="@color/color_bg_Clibrary"
         android:text="@string/Create"
+        android:textColor="@color/white"
         android:textSize="24sp"
+
         />
-
-
 
 </LinearLayout>

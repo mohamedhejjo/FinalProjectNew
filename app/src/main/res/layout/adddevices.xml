@@ -97,16 +97,19 @@
             android:maxLength="20" />
     </com.google.android.material.textfield.TextInputLayout>
 
+
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/addcreatedivaec"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginTop="40dp"
-        android:textColor="@color/white"
-        android:background="@drawable/for_logo"
-        android:gravity="center"
+        android:layout_height="70dp"
+        android:layout_margin="10dp"
+        android:layout_marginBottom="324dp"
+        android:background="@drawable/btnadmin"
+        android:backgroundTint="@color/color_bg_Clibrary"
         android:text="@string/adddevice"
-        android:textSize="20dp" />
+        android:textColor="@color/white"
+        android:textSize="24sp" />
 
 
 </LinearLayout>

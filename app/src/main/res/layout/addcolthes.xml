@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".admin.Colthesa.addcolthes">
-
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/addimage"
         android:layout_width="180dp"
@@ -124,13 +123,14 @@
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/addcreate"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginTop="40dp"
-        android:background="@drawable/for_logo"
-        android:gravity="center"
+        android:layout_height="70dp"
+        android:layout_margin="10dp"
+        android:layout_marginBottom="324dp"
+        android:background="@drawable/btnadmin"
+        android:backgroundTint="@color/color_bg_Clibrary"
         android:text="@string/addcol"
         android:textColor="@color/white"
-        android:textSize="20dp" />
+        android:textSize="24sp" />
 
 
 </LinearLayout>

@@ -22,8 +22,8 @@
     <string name="Create">انشاء</string>
     <string name="welcom_masseg2">مرحبا بكم في متجر غزة ... مسؤول</string>
     <string name="welcom_masseg3">مرحبًا بالمشرف</string>
-    <string name="welcom_masseguser">مرحب بدك ايها المستخدم نتشرف في خدمتك</string>
-    <string name="welcom_massegadmin">مرحب بدك ايها المشرف نتشرف في خدمتك</string>
+    <string name="welcom_masseguser">مرحب بك ايها المستخدم نتشرف في خدمتك</string>
+    <string name="welcom_massegadmin">مرحب بك ايها المشرف نتشرف في خدمتك</string>
     <string-array name="addcolthesadd">
         <item>ذكر </item>
         <item>أنثى</item>
@@ -57,21 +57,28 @@
     <string name="Updateclothes">تعديل الملابس </string>
     <string name="add">اضافة</string>
     <string name="delete">حذف</string>
-    <string name="male">ذكر</string>
-    <string name="female">أنثى</string>
+    <string name="male">رجالي</string>
+    <string name="female">حريمي</string>
     <string name="laptop">لابتوب</string>
     <string name="mouse">ماوس</string>
     <string name="keyboard">كيبورد</string>
     <string name="playstation">بلاستيشن</string>
     <string name="fjacket">جاكيت</string>
+
     <string name="fshoe">حذاء</string>
     <string name="fdress">فستان</string>
     <string name="fhat">طاقيه</string>
 
     <string name="jacket">جاكيت</string>
+    <string name="pric">السعر</string>
+    <string name="morw">رجالي || حريمي</string>
+
+
+
     <string name="shoe">حذاء</string>
     <string name="jeans">بنطلون </string>
     <string name="hat">طاقية</string>
     <string name="price1">السعر</string>
     <string name="language">اللغة</string>
+
 </resources>

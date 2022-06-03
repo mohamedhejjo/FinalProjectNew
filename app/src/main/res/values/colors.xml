@@ -8,4 +8,8 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="red">#F44336</color>
+    <color name="color_bg_Clibrary">#b784ce</color>
+    <color name="color_bg_CC">#cc7fb5</color>
+    <color name="color_bg_favorites">#85a5e8</color>
+
 </resources>
