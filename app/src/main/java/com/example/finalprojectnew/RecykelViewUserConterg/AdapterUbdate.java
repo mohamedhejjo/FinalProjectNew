@@ -9,16 +9,18 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+import com.example.finalprojectnew.Class.Product;
 import com.example.finalprojectnew.R;
 import com.example.finalprojectnew.admin.Colthesa.Updateprofinalcolthes;
 
 import java.util.ArrayList;
 
 public class AdapterUbdate extends RecyclerView.Adapter<HolderShowPrice> {
-    ArrayList<ClassShowPrice> data;
+    ArrayList<Product> data;
     Context context;
 
-    public AdapterUbdate(ArrayList<ClassShowPrice> data) {
+    public AdapterUbdate(ArrayList<Product> data) {
         this.data = data;
     }
 
@@ -32,21 +34,20 @@ public class AdapterUbdate extends RecyclerView.Adapter<HolderShowPrice> {
 
     @Override
     public void onBindViewHolder(@NonNull HolderShowPrice holder, int position) {
-        ClassShowPrice csp=data.get(position);
+        Product csp=data.get(position);
         holder.name.setText(csp.getName());
-        holder.image.setImageResource(csp.getImage());
+        Glide.with(holder.itemView).load(csp.getImage()).into(holder.image);
         holder.price.setText(csp.getPrice());
-        holder.pro.setText(csp.getPro());
-        holder.female.setText(csp.getFemal());
+        holder.pro.setText(csp.getProduct());
+        holder.female.setText(csp.getSex());
 
         holder.view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String male= context.getString(R.string.male);
                 String female= context.getString(R.string.female);
-                if (csp.getFemal().equals(female)||csp.getFemal().equals(male)){
+                if (csp.getSex().equals(female)||csp.getSex().equals(male)){
                     Intent intent=new Intent(context, Updateprofinalcolthes.class);
-                    intent.putExtra("ClassShowPrice",csp);
                     context.startActivity(intent);
                 } }
         });

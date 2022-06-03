@@ -7,9 +7,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+import com.example.finalprojectnew.Class.Product;
 import com.example.finalprojectnew.R;
 import com.example.finalprojectnew.RecykelViewUserConterg.ClassShowPrice;
 import com.example.finalprojectnew.admin.adminCategories;
@@ -21,17 +24,17 @@ public class deletefinal extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.deletefinal);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
+View view;
         Intent intent=getIntent();
-        ClassShowPrice csp=(ClassShowPrice)intent.getSerializableExtra("ClassShowPrice");
+        Product csp=(Product)intent.getSerializableExtra("ClassShowPrice");
         ImageView imag=findViewById(R.id.imageuserdelete);
         TextView Name=findViewById(R.id.nameuserdelete);
         TextView price=findViewById(R.id.priceuserdelete);
         TextView pro=findViewById(R.id.prouserdelete);
-        imag.setImageResource(csp.getImage());
+//        imag.setImageURI(csp.getImage());
         Name.setText(csp.getName());
         price.setText(""+csp.getPrice()+"$");
-        pro.setText(csp.getPro());
+        pro.setText(csp.getProduct());
 
     }
     @Override

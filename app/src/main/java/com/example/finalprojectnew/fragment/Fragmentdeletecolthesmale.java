@@ -2,6 +2,7 @@ package com.example.finalprojectnew.fragment;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -9,36 +10,64 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
+import com.example.finalprojectnew.Class.Product;
 import com.example.finalprojectnew.R;
+import com.example.finalprojectnew.RecykelViewUserConterg.AdapterUbdate;
 import com.example.finalprojectnew.RecykelViewUserConterg.Adapterdelete;
 import com.example.finalprojectnew.RecykelViewUserConterg.ClassShowPrice;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 
 public class Fragmentdeletecolthesmale extends Fragment {
 
+    public ArrayList<Product> data2=new ArrayList<Product>();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view= inflater.inflate(R.layout.fragmentdeletecolthesmale, container, false);
-        ArrayList<ClassShowPrice> data=new ArrayList<>();
-        String male= getString(R.string.male);
-        String jacket=getString(R.string.jacket);
-        String shoe= getString(R.string.shoe);
-        String jeans= getString(R.string.jeans);
-        String hat= getString(R.string.hat);
-        data.add(new ClassShowPrice("male!",R.drawable.male,"50",jacket,male));
-        data.add(new ClassShowPrice("male!",R.drawable.female,"80",shoe,male));
-        data.add(new ClassShowPrice("male!",R.drawable.male,"100",jeans,male));
-        data.add(new ClassShowPrice("male!",R.drawable.female,"200",hat,male));
-        RecyclerView rv=view.findViewById(R.id.rec9);
-        Adapterdelete ad=new Adapterdelete(data);
-        rv.setAdapter(ad);
-        rv.hasFixedSize();
-        RecyclerView.LayoutManager lm=new LinearLayoutManager(container.getContext());
-        rv.setLayoutManager(lm);
+        data2.clear();
+        FirebaseDatabase db2=FirebaseDatabase.getInstance();
+        DatabaseReference ref2=db2.getReference("adddevice");
+        Task<DataSnapshot> task2=ref2.get();
+        task2.addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DataSnapshot> task) {
+                if (task.isSuccessful()){
+                    Iterable<DataSnapshot>data3=task.getResult().getChildren();
+                    for(DataSnapshot snap:data3) {
+                        Product p = snap.getValue(Product.class);
+                        if (p.getProduct().equals("male")){
+                            if (p.getProduct().equals("jacket")){
+                                data2.add(p);
+                            }else if(p.getProduct().equals("shoe")){
+                                data2.add(p);
+                            }else if(p.getProduct().equals("jeans")){
+                                data2.add(p);
+                            }else if(p.getProduct().equals("hat")){
+                                data2.add(p);
+                            }}
+                    }
+                    RecyclerView rv=view.findViewById(R.id.rec9);
+                    AdapterUbdate ad=new AdapterUbdate(data2);
+                    rv.setAdapter(ad);
+                    rv.hasFixedSize();
+                    RecyclerView.LayoutManager lm=new LinearLayoutManager(getContext());
+                    rv.setLayoutManager(lm);
+                }
+                else{
+                    String error=task.getException().getMessage();
+                    Toast.makeText(getContext(), error, Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
         return view;
     }
 }
