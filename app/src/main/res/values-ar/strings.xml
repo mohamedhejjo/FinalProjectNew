@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">مشروع </string>
+    <string name="app_name1">مسؤول</string>
+    <string name="app_name2">مستخدم</string>
+    <string name="app_name3">عناصر</string>
+    <string name="app_name4">ملابس</string>
+    <string name="app_name5">اجهزة</string>
+    <string name="app_name6">كتب</string>
+    <string name="app_name7">ذكر</string>
+    <string name="app_name8">انثى</string>
+    <string name="app_name9">تعديل الاجهزة</string>
+    <string name="app_name10">تعديل الملابس</string>
+    <string name="app_name11">تعديل النهائي للملابس</string>
+    <string name="app_name12">تعديل النهائي للجهاز</string>
+    <string name="app_name13">حذف الجهاز</string>
+    <string name="app_name14">حذف الملابس</string>
+    <string name="app_name15">الحذف النهائي</string>
+    <string name="Login_administrator"> مشرف</string>
+    <string name="Login_user">  مستخدم</string>
+    <string name="Login"> تسجيل الدخول </string>
+    <string name="Create">انشاء</string>
+    <string name="welcom_masseg2">مرحبا بكم في متجر غزة ... مسؤول</string>
+    <string name="welcom_masseg3">مرحبًا بالمشرف</string>
+    <string name="welcom_masseguser">مرحب بدك ايها المستخدم نتشرف في خدمتك</string>
+    <string name="welcom_massegadmin">مرحب بدك ايها المشرف نتشرف في خدمتك</string>
+    <string-array name="addcolthesadd">
+        <item>ذكر </item>
+        <item>أنثى</item>
+    </string-array>
+    <string-array name="adddeviceadd">
+        <item>لابتوب </item>
+        <item>ماوس</item>
+        <item>كيبورد</item>
+        <item>بلاستيشن</item>
+
+    </string-array>
+
+    <string name="hello_blank_fragment">مرحبا جزء فارغ</string>
+    <string name="email">ادخل الايميل</string>
+    <string name="name">ادخل الاسم</string>
+    <string name="password">ادخل كلمة السر</string>
+    <string name="namenew">الاسم الجديد</string>
+    <string name="nameold">الاسم القديم</string>
+    <string name="passwordnew">كلمة السر الجديد</string>
+    <string name="passwordold">كلمة السر القديم</string>
+    <string name="numberold">رقم قديم</string>
+    <string name="numbernew">رقم جديد</string>
+    <string name="number">ادخل الرقم</string>
+    <string name="sex">الجنس</string>
+    <string name="Producer">منتج</string>
+    <string name="price">ادخل السعر</string>
+    <string name="addcol">أضف الملابس</string>
+    <string name="Update"> تعديل</string>
+    <string name="adddevice">أضف الجهاز</string>
+    <string name="Updatedevice">تعديل الجهاز</string>
+    <string name="Updateclothes">تعديل الملابس </string>
+    <string name="add">اضافة</string>
+    <string name="delete">حذف</string>
+    <string name="male">ذكر</string>
+    <string name="female">أنثى</string>
+    <string name="laptop">لابتوب</string>
+    <string name="mouse">ماوس</string>
+    <string name="keyboard">كيبورد</string>
+    <string name="playstation">بلاستيشن</string>
+    <string name="fjacket">جاكيت</string>
+    <string name="fshoe">حذاء</string>
+    <string name="fdress">فستان</string>
+    <string name="fhat">طاقيه</string>
+
+    <string name="jacket">جاكيت</string>
+    <string name="shoe">حذاء</string>
+    <string name="jeans">بنطلون </string>
+    <string name="hat">طاقية</string>
+    <string name="price1">السعر</string>
+    <string name="language">اللغة</string>
+</resources>

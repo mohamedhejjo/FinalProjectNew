@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.finalprojectnew">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FinalProjectNew">
+        <activity
+            android:name=".user.Categories.Price"
+            android:exported="false"
+            android:label="@string/price1"
+            android:parentActivityName=".user.Categories.Price"
+            />
+        <activity
+            android:name=".user.Categories.activityuserfinal"
+            android:exported="false"
+            android:label="@string/Producer"
+            android:parentActivityName=".user.userCategories"
+            />
+        <activity
+            android:name=".admin.Colthesa.deletefinal"
+            android:exported="false"
+            android:label="@string/app_name15"
+            android:parentActivityName=".admin.Categories.delete"
+            />
+        <activity
+            android:name=".admin.Colthesa.deletedevice"
+            android:exported="false"
+            android:label="@string/app_name13"
+            android:parentActivityName=".admin.Categories.delete"
+            />
+        <activity
+            android:name=".admin.Colthesa.deletecolthes"
+            android:exported="false"
+            android:label="@string/app_name14"
+            android:parentActivityName=".admin.Categories.delete"
+            />
+        <activity
+            android:name=".admin.Colthesa.Updateprofinaldevice"
+            android:exported="false"
+            android:label="@string/app_name12"
+            android:parentActivityName=".admin.Categories.update"
+            />
+        <activity
+            android:name=".admin.Colthesa.Updateprofinalcolthes"
+            android:parentActivityName=".admin.Categories.update"
+            android:label="@string/app_name11"
+
+            android:exported="false" />
+        <activity
+            android:name=".admin.Colthesa.Updatecolthes"
+            android:parentActivityName=".admin.Categories.update"
+            android:label="@string/app_name10"
+            android:exported="false" />
+        <activity
+            android:name=".admin.Colthesa.Updatedevice"
+            android:exported="false"
+            android:label="@string/app_name9"
+            android:parentActivityName=".admin.Categories.update"
+            />
+        <activity
+            android:name=".admin.Colthesa.addcolthes"
+            android:exported="false"
+            android:label="@string/app_name8"
+            android:parentActivityName=".admin.Colthesa.addcolthes" />
+        <activity
+            android:name=".admin.Colthesa.adddevices"
+            android:exported="false"
+            android:label="@string/app_name7"
+            android:parentActivityName=".admin.Colthesa.adddevices" />
+        <activity
+            android:name=".admin.Categories.update"
+            android:exported="false"
+            android:label="@string/Update"
+            android:parentActivityName=".admin.adminCategories" />
+        <activity
+            android:name=".admin.Categories.add"
+            android:exported="false"
+            android:label="@string/add"
+            android:parentActivityName=".admin.adminCategories" />
+        <activity
+            android:name=".admin.Categories.delete"
+            android:exported="false"
+            android:label="@string/delete"
+            android:parentActivityName=".admin.adminCategories" />
+        <activity
+            android:name=".admin.adminCategories"
+            android:exported="false"
+            android:label="@string/app_name3"
+            android:parentActivityName=".admin.admin" />
+        <activity
+            android:name=".user.Clothes.userfemale"
+            android:exported="false"
+            android:label="@string/app_name8"
+            android:parentActivityName=".user.Categories.clothes" />
+        <activity
+            android:name=".user.Clothes.usermale"
+            android:exported="false"
+            android:label="@string/app_name7"
+            android:parentActivityName=".user.Categories.clothes" />
+        <activity
+            android:name=".user.Categories.devices"
+            android:exported="false"
+            android:label="@string/app_name5"
+            android:parentActivityName=".user.userCategories" />
+        <activity
+            android:name=".user.Categories.clothes"
+            android:exported="false"
+            android:label="@string/app_name4"
+            android:parentActivityName=".user.userCategories" />
+        <activity
+            android:name=".user.userCategories"
+            android:exported="false"
+            android:label="@string/app_name3"
+            android:parentActivityName=".user.user" />
+        <activity
+            android:name=".admin.admin"
+            android:exported="false"
+            android:label="@string/app_name1"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".user.user"
+            android:exported="false"
+            android:label="@string/app_name2"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".splash.splash"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+        </activity>
+    </application>
+
+</manifest>

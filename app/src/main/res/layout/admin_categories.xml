@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+ android:orientation="vertical"
+    tools:context=".admin.adminCategories">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/splash2"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        app:lottie_autoPlay="true"
+        app:lottie_rawRes="@raw/add" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/add"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/btnadmin"
+
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:text="@string/add"
+        android:layout_margin="10dp"
+        android:textSize="24sp"
+        />
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/splash3"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        app:lottie_autoPlay="true"
+        app:lottie_rawRes="@raw/delete" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/delete"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:text="@string/delete"
+        android:layout_margin="10dp"
+        android:background="@drawable/btnadmin"
+
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/splash4"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        app:lottie_autoPlay="true"
+        app:lottie_rawRes="@raw/update" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/update"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        android:text="@string/Update"
+        android:background="@drawable/btnadmin"
+
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        />
+
+</LinearLayout>

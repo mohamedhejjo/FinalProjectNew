@@ -1,0 +1,77 @@
+<resources>
+    <string name="app_name">FinalProject</string>
+    <string name="app_name1">admin</string>
+    <string name="app_name2">user</string>
+    <string name="app_name3">items</string>
+    <string name="app_name4">clothes</string>
+    <string name="app_name5">Update</string>
+    <string name="app_name6">delete</string>
+    <string name="app_name7">AddDevice</string>
+    <string name="app_name8">AddColthes</string>
+    <string name="app_name9">Updatedevice</string>
+    <string name="app_name10">UpdateColthes</string>
+    <string name="app_name11">Updateprofinalcolthes</string>
+    <string name="app_name12">Updateprofinaldevice</string>
+    <string name="app_name13">delete device</string>
+    <string name="app_name14">delete colthes</string>
+    <string name="app_name15">delete final</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Login_administrator">Admin</string>
+    <string name="Login_user">user</string>
+    <string name="Login">Login</string>
+    <string name="Create">Create</string>
+    <string name="welcom_masseg2">Welcome to Gaza Store... admin</string>
+    <string name="welcom_masseg3">Welcome admin</string>
+    <string-array name="addcolthesadd">
+        <item>male </item>
+        <item>female</item>
+    </string-array>
+    <string-array name="adddeviceadd">
+        <item>laptop </item>
+        <item>mouse</item>
+        <item>keyboard</item>
+        <item>Play Station</item>
+
+    </string-array>
+    <string name="welcom_masseguser">Welcome, user, we are honored to serve you</string>
+    <string name="welcom_massegadmin">Welcome, admin, we are honored to serve you</string>
+    <string name="email">Enter email</string>
+    <string name="name">Enter Name</string>
+    <string name="password">Enter password</string>
+    <string name="namenew">Enter name new</string>
+    <string name="nameold">Enter name old</string>
+    <string name="passwordnew">Enter password new</string>
+    <string name="passwordold">Enter password old</string>
+    <string name="Update"> update</string>
+    <string name="numberold">number old</string>
+    <string name="numbernew">number new</string>
+    <string name="number">Enter number</string>
+    <string name="sex">sex</string>
+    <string name="Producer">Producer</string>
+    <string name="price">Enter price</string>
+    <string name="addcol">add colthes</string>
+    <string name="adddevice">add device</string>
+    <string name="Updatedevice">update device</string>
+    <string name="Updateclothes">update colthes</string>
+    <string name="add">add</string>
+    <string name="delete">delete</string>
+    <string name="male">male</string>
+    <string name="female">female</string>
+    <string name="laptop">laptop</string>
+    <string name="mouse">mouse</string>
+    <string name="keyboard">keyboard</string>
+    <string name="playstation">playstation</string>
+
+    <string name="fjacket">jacket</string>
+    <string name="fshoe">shoe</string>
+    <string name="fdress">dress</string>
+    <string name="fhat">hat</string>
+
+    <string name="jacket">jacket</string>
+    <string name="shoe">shoe</string>
+    <string name="jeans">jeans</string>
+    <string name="hat">hat</string>
+    <string name="price1">price</string>
+    <string name="language">language</string>
+
+</resources>

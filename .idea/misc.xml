@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2203125" />
+        <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/drawable/baseline.xml" value="0.11197916666666667" />
+        <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/drawable/btnadmin.xml" value="0.11197916666666667" />
+        <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/drawable/delete.xml" value="0.1" />
+        <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/drawable/email.xml" value="0.2203125" />
+        <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/drawable/for_logo.xml" value="0.2203125" />
+        <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/drawable/fragmentuttoncaolor.xml" value="0.2203125" />
+        <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/drawable/home.xml" value="0.2203125" />
+        <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2203125" />
+        <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/drawable/name.xml" value="0.2203125" />
+        <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/drawable/number.xml" value="0.14629629629629629" />
+        <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/drawable/pass.xml" value="0.2203125" />
+        <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/drawable/text.xml" value="0.2203125" />
+        <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/activityuserfinal.xml" value="0.1" />
+        <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/add.xml" value="0.1" />
+        <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/addcolthes.xml" value="0.1" />
+        <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/adddevices.xml" value="0.1" />
+        <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/admin.xml" value="0.1" />
+        <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/admin_categories.xml" value="0.1" />
+        <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/clothes.xml" value="0.1" />
+        <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/dalatedevice.xml" value="0.1" />
+        <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/delete.xml" value="0.1" />
+        <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/deletecolthes.xml" value="0.1" />
+        <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/deletefinal.xml" value="0.1" />
+        <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/devices.xml" value="0.1" />
+        <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/fragmentadmin_create.xml" value="0.1" />
+        <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/fragmentadmin_update.xml" value="0.1" />
+        <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/fragmentadminlogin.xml" value="0.1" />
+        <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/fragmentdeletecolthesfemale.xml" value="0.1" />
+        <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/fragmentdeletecolthesmale.xml" value="0.1" />
+        <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/fragmentupdatecolthesmale.xml" value="0.1" />
+        <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/fragmentuser_create.xml" value="0.1" />
+        <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/fragmentuser_update.xml" value="0.1" />
+        <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/fragmentuserlogin.xml" value="0.1" />
+        <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/itemde.xml" value="0.1" />
+        <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/itemshowprice.xml" value="0.1" />
+        <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/mainadmin.xml" value="0.1" />
+        <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/mainuser.xml" value="0.1" />
+        <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/price.xml" value="0.1" />
+        <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/splash.xml" value="0.1" />
+        <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/update.xml" value="0.1" />
+        <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/updatecolthes.xml" value="0.1" />
+        <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/updatecolthesfemale.xml" value="0.1" />
+        <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/updatedevice.xml" value="0.1" />
+        <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/updateprofinalcolthes.xml" value="0.1" />
+        <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/updateprofinaldevice.xml" value="0.1" />
+        <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/user.xml" value="0.1" />
+        <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/user_categories.xml" value="0.1" />
+        <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/userfemale.xml" value="0.1" />
+        <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/usermale.xml" value="0.1" />
+        <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/menu/deletefinal.xml" value="0.1" />
+        <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/menu/lang.xml" value="0.1" />
+        <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/menu/menuadd.xml" value="0.1" />
+        <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/menu/menudelete.xml" value="0.1" />
+        <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
+        <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

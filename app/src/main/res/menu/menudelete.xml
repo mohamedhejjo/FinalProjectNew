@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <item
+        android:id="@+id/homedelete"
+        android:icon="@drawable/home"
+        android:title="Home"
+        ></item>
+
+    <item
+        android:id="@+id/deletecoltes"
+        android:title="deleteColthes"
+        ></item>
+
+    <item
+        android:id="@+id/deletedevices"
+        android:title="deleteDevices"
+        ></item>
+</menu>
