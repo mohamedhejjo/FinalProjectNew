@@ -103,7 +103,7 @@
             android:layout_height="80dp"
             android:scaleType="fitXY"
             android:layout_marginTop="10dp"
-            android:layout_marginLeft="60dp"
+            android:layout_marginLeft="50dp"
             android:backgroundTint="@color/white"
             android:src="@drawable/next"
             />
@@ -138,7 +138,7 @@
             android:layout_gravity="center_horizontal"
             android:backgroundTint="@color/white"
             android:layout_marginTop="10dp"
-            android:layout_marginLeft="60dp"
+            android:layout_marginLeft="30dp"
             android:src="@drawable/next"
             />
     </LinearLayout>
