@@ -10,58 +10,53 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FinalProjectNew">
         <activity
+            android:name=".Pricefinal"
+            android:exported="false" />
+        <activity
             android:name=".user.Categories.Price"
             android:exported="false"
             android:label="@string/price1"
-            android:parentActivityName=".user.Categories.Price"
-            />
+            android:parentActivityName=".user.Categories.Price" />
         <activity
             android:name=".user.Categories.activityuserfinal"
             android:exported="false"
             android:label="@string/Producer"
-            android:parentActivityName=".user.userCategories"
-            />
+            android:parentActivityName=".user.userCategories" />
         <activity
             android:name=".admin.Colthesa.deletefinal"
             android:exported="false"
             android:label="@string/app_name15"
-            android:parentActivityName=".admin.Categories.delete"
-            />
+            android:parentActivityName=".admin.Categories.delete" />
         <activity
             android:name=".admin.Colthesa.deletedevice"
             android:exported="false"
             android:label="@string/app_name13"
-            android:parentActivityName=".admin.Categories.delete"
-            />
+            android:parentActivityName=".admin.Categories.delete" />
         <activity
             android:name=".admin.Colthesa.deletecolthes"
             android:exported="false"
             android:label="@string/app_name14"
-            android:parentActivityName=".admin.Categories.delete"
-            />
+            android:parentActivityName=".admin.Categories.delete" />
         <activity
             android:name=".admin.Colthesa.Updateprofinaldevice"
             android:exported="false"
             android:label="@string/app_name12"
-            android:parentActivityName=".admin.Categories.update"
-            />
+            android:parentActivityName=".admin.Categories.update" />
         <activity
             android:name=".admin.Colthesa.Updateprofinalcolthes"
-            android:parentActivityName=".admin.Categories.update"
+            android:exported="false"
             android:label="@string/app_name11"
-
-            android:exported="false" />
+            android:parentActivityName=".admin.Categories.update" />
         <activity
             android:name=".admin.Colthesa.Updatecolthes"
-            android:parentActivityName=".admin.Categories.update"
+            android:exported="false"
             android:label="@string/app_name10"
-            android:exported="false" />
+            android:parentActivityName=".admin.Categories.update" />
         <activity
             android:name=".admin.Colthesa.Updatedevice"
             android:exported="false"
             android:label="@string/app_name9"
-            android:parentActivityName=".admin.Categories.update"
-            />
+            android:parentActivityName=".admin.Categories.update" />
         <activity
             android:name=".admin.Colthesa.addcolthes"
             android:exported="false"
@@ -129,7 +124,7 @@
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".splash.splash"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -138,8 +133,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true"></activity>
     </application>
 
 </manifest>
