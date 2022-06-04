@@ -18,7 +18,7 @@ import com.example.finalprojectnew.admin.Colthesa.deletefinal;
 
 import java.util.ArrayList;
 
-public class Adapterdelete extends RecyclerView.Adapter<HolderShowPrice> {
+public class Adapterdelete extends RecyclerView.Adapter<Holderdelete> {
     ArrayList<Product> data;
     Context context;
 
@@ -28,23 +28,24 @@ public class Adapterdelete extends RecyclerView.Adapter<HolderShowPrice> {
 
     @NonNull
     @Override
-    public HolderShowPrice onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public Holderdelete onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         context=parent.getContext();
         View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.itemshowprice,parent,false);
-        return new HolderShowPrice(view);    }
+        return new Holderdelete(view);    }
 
     @Override
-    public void onBindViewHolder(@NonNull HolderShowPrice holder, int position) {
+    public void onBindViewHolder(@NonNull Holderdelete holder, int position) {
         Product csp=data.get(position);
         holder.name.setText(csp.getName());
         Glide.with(holder.itemView).load(csp.getImage()).into(holder.image);
         holder.price.setText(csp.getPrice());
         holder.pro.setText(csp.getProduct());
         holder.female.setText(csp.getSex());
-        holder.itemw.setOnClickListener(new View.OnClickListener() {
+        holder.view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (csp.getName().equals("female!")||csp.getName().equals("male!")){
+                if (csp.getSex().equals("female")||csp.getSex().equals("أنثى")||csp.getSex().equals("male")
+                ||csp.getSex().equals("ذكر")){
                     Intent intent=new Intent(context, deletefinal.class);
                     intent.putExtra("product", (Parcelable) csp);
                     context.startActivity(intent);

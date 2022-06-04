@@ -9,26 +9,18 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.finalprojectnew.R;
 
-
-public class HolderShowPrice extends RecyclerView.ViewHolder {
+public class Holderdelete extends RecyclerView.ViewHolder {
     TextView name;
     TextView price;
     TextView pro;
     TextView female;
     ImageView image;
     View view;
-    View item;
-    View itemnew;
-
-    public HolderShowPrice(@NonNull View itemView) {
+    public Holderdelete(@NonNull View itemView) {
         super(itemView);
         view =itemView;
-        item =itemView;
-        itemnew =itemView;
         name=itemView.findViewById(R.id.nameuser);
         image=itemView.findViewById(R.id.imageuser);
         price=itemView.findViewById(R.id.priceuser);
         pro=itemView.findViewById(R.id.prouser);
-        female=itemView.findViewById(R.id.femal);
-    }
-}
+        female=itemView.findViewById(R.id.femal);}}

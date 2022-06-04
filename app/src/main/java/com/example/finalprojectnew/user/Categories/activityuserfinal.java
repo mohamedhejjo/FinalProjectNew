@@ -22,28 +22,27 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.ArrayList;
 
 public class activityuserfinal extends AppCompatActivity {
-//    String female=getString(R.string.female);
-//    String male=getString(R.string.male);
-//    String laptop=getString(R.string.laptop);
-//    String mouse=getString(R.string.mouse);
-//    String keyboard= getString(R.string.keyboard);
-//    String playstation= getString(R.string.playstation);
-//    String fjacket=getString(R.string.fjacket);
-//    String fshoe= getString(R.string.fshoe);
-//    String fdress= getString(R.string.fdress);
-//    String fhat= getString(R.string.fhat);
-//    String jacket=getString(R.string.fjacket);
-//    String shoe= getString(R.string.fshoe);
-//    String jeans= getString(R.string.jeans);
-//    String hat= getString(R.string.hat);
    public ArrayList<Product> data2=new ArrayList<Product>();
+    FirebaseDatabase db=FirebaseDatabase.getInstance();
+    Intent intent=getIntent();
+    String pro=intent.getStringExtra("finaluser");
+        String laptop=getString(R.string.laptop);
+        String mouse=getString(R.string.mouse);
+        String keyboard= getString(R.string.keyboard);
+        String playstation= getString(R.string.playstation);
+        String fjacket=getString(R.string.fjacket);
+        String fshoe= getString(R.string.fshoe);
+        String fdress= getString(R.string.fdress);
+        String fhat= getString(R.string.fhat);
+        String jacket=getString(R.string.fjacket);
+        String shoe= getString(R.string.fshoe);
+        String jeans= getString(R.string.jeans);
+        String hat= getString(R.string.hat);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activityuserfinal);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        data2.clear();
-        FirebaseDatabase db=FirebaseDatabase.getInstance();
         DatabaseReference ref=db.getReference("addcolthes");
         Task<DataSnapshot> task=ref.get();
         task.addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
@@ -53,33 +52,33 @@ public class activityuserfinal extends AppCompatActivity {
 Iterable<DataSnapshot>data=task.getResult().getChildren();
 for(DataSnapshot snap:data){
     Product p=snap.getValue(Product.class);
-   if(p.getSex().equals("female")){
-       if (p.getProduct().equals("fjacket")){
+   if(p.getSex().equals("female")||p.getSex().equals("أنثى")){
+       if (p.getProduct().equals("fjacket")||p.getProduct().equals("جاكيت")||pro.equals(fjacket)){
            data2.add(p);
-       }else if(p.getProduct().equals("fshoe")){
+       }else if(p.getProduct().equals("fshoe")||p.getProduct().equals("حذاء")||pro.equals(fshoe)){
            data2.add(p);
-       }else if(p.getProduct().equals("fdress")){
+       }else if(p.getProduct().equals("fdress")||p.getProduct().equals("فستان")||pro.equals(fdress)){
            data2.add(p);
-       }else if(p.getProduct().equals("fhat")){
+       }else if(p.getProduct().equals("fhat")||p.getProduct().equals("طاقية")||pro.equals(fdress)){
            data2.add(p);
        }
 
-   } if(p.getSex().equals("male")){
-        if (p.getProduct().equals("jacket")){
+   } if(p.getSex().equals("male")||p.getSex().equals("ذكر")){
+        if (p.getProduct().equals("jacket")||p.getProduct().equals("جاكيت")||pro.equals(jacket)){
             data2.add(p);
-        }else if(p.getProduct().equals("jeans")){
+        }else if(p.getProduct().equals("jeans")||p.getProduct().equals("بنطلون")||pro.equals(jeans)){
             data2.add(p);
-        }else if(p.getProduct().equals("fdress")){
+        }else if(p.getProduct().equals("shoe")||p.getProduct().equals("حذاء")||pro.equals(shoe)){
             data2.add(p);
-        }else if(p.getProduct().equals("hat")){
+        }else if(p.getProduct().equals("hat")||p.getProduct().equals("طاقية")||pro.equals(hat)){
             data2.add(p);
         }
     }
-}   RecyclerView rv=findViewById(R.id.recy1);
+} RecyclerView rv=findViewById(R.id.recy1);
                     Adapterfinaluser ad=new Adapterfinaluser(data2);
-                    rv.setAdapter(ad);
-                    rv.hasFixedSize();
                     RecyclerView.LayoutManager lm=new LinearLayoutManager(getApplicationContext());
+
+                    rv.setAdapter(ad);
                     rv.setLayoutManager(lm);
                 }else{
                     String error=task.getException().getMessage();
@@ -87,9 +86,7 @@ for(DataSnapshot snap:data){
                 }
             }
         });
-        data2.clear();
-        FirebaseDatabase db2=FirebaseDatabase.getInstance();
-        DatabaseReference ref2=db2.getReference("adddevice");
+        DatabaseReference ref2=db.getReference("adddevice");
         Task<DataSnapshot> task2=ref2.get();
         task2.addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
             @Override
@@ -98,21 +95,20 @@ for(DataSnapshot snap:data){
                     Iterable<DataSnapshot>data3=task.getResult().getChildren();
                 for(DataSnapshot snap:data3) {
                     Product p = snap.getValue(Product.class);
-                    if (p.getProduct().equals("laptop")){
+                    if (p.getProduct().equals("laptop")||p.getProduct().equals("لابتوب")||pro.equals(laptop)){
                         data2.add(p);
-                    }else if(p.getProduct().equals("mouse")){
+                    }else if(p.getProduct().equals("mouse")||p.getProduct().equals("ماوس")||pro.equals(mouse)){
                         data2.add(p);
-                    }else if(p.getProduct().equals("keyboard")){
+                    }else if(p.getProduct().equals("keyboard")||p.getProduct().equals("كيبورد")||pro.equals(keyboard)){
                         data2.add(p);
-                    }else if(p.getProduct().equals("playstation")){
+                    }else if(p.getProduct().equals("playstation")||p.getProduct().equals("بلاستيشن")||pro.equals(playstation)){
                         data2.add(p);
                     }
-                }
-                    RecyclerView rv=findViewById(R.id.recy1);
-        Adapterfinaluser ad=new Adapterfinaluser(data2);
-            rv.setAdapter(ad);
-          rv.hasFixedSize();
-            RecyclerView.LayoutManager lm=new LinearLayoutManager(getApplicationContext());
+                } RecyclerView rv=findViewById(R.id.recy1);
+                    Adapterfinaluser ad=new Adapterfinaluser(data2);
+                    RecyclerView.LayoutManager lm=new LinearLayoutManager(getApplicationContext());
+
+                    rv.setAdapter(ad);
            rv.setLayoutManager(lm);
                 }
           else{

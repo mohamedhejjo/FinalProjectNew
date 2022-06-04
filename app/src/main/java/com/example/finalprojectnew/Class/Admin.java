@@ -5,8 +5,16 @@ public class Admin {
     private String number;
     private String email;
     private String password;
+    public Admin(){
+    }
 
-    public Admin( String id,String number, String email, String password) {
+    public Admin( String number, String password) {
+        this.id = id;
+        this.number = number;
+        this.password = password;
+    }
+
+    public Admin(String id, String number, String email, String password) {
         this.id = id;
         this.number = number;
         this.email = email;

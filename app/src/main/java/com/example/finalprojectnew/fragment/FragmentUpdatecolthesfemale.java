@@ -27,47 +27,39 @@ import java.util.ArrayList;
 
 public class FragmentUpdatecolthesfemale extends Fragment {
 
-
+    ArrayList<Product> data=new ArrayList<>();
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view= inflater.inflate(R.layout.updatecolthesfemale, container, false);
-        ArrayList<Product> data=new ArrayList<>();
-        data.clear();
-        FirebaseDatabase db2=FirebaseDatabase.getInstance();
-        DatabaseReference ref2=db2.getReference("addcolthes");
-        Task<DataSnapshot> task2=ref2.get();
-        task2.addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+
+        FirebaseDatabase db=FirebaseDatabase.getInstance();
+        DatabaseReference ref=db.getReference("addcolthes");
+        Task<DataSnapshot> task=ref.get();
+        task.addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
             @Override
             public void onComplete(@NonNull Task<DataSnapshot> task) {
-        if (task.isSuccessful()){
-            Iterable<DataSnapshot>data3=task.getResult().getChildren();
-            for(DataSnapshot snap:data3) {
-                Product p = snap.getValue(Product.class);
-                if (p.getProduct().equals("female")){
-                    if (p.getProduct().equals("fjacket")){
-                        data.add(p);
-                    }else if(p.getProduct().equals("fshoe")){
-                        data.add(p);
-                    }else if(p.getProduct().equals("fdress")){
-                        data.add(p);
-                    }else if(p.getProduct().equals("fhat")){
-                        data.add(p);
-                    }}
+                if (task.isSuccessful()){
+                    Iterable<DataSnapshot>data1=task.getResult().getChildren();
+                    for(DataSnapshot snap:data1) {
+                        Product p = snap.getValue(Product.class);
+                        String name=p.getSex();
+                        if (name.equals("female")||name.equals("أنثى")){
+                            data.add(p);
+                        }
+                    }                    RecyclerView rv=view.findViewById(R.id.rec7);
+
+                    AdapterUbdate ad=new AdapterUbdate(data);
+                    rv.setAdapter(ad);
+                    RecyclerView.LayoutManager lm=new LinearLayoutManager(getContext());
+                    rv.setLayoutManager(lm);
+                }
+                else{
+                    String error=task.getException().getMessage();
+                    Toast.makeText(getContext(), error, Toast.LENGTH_SHORT).show();
+                }
             }
-            RecyclerView rv=view.findViewById(R.id.rec7);
-            AdapterUbdate ad=new AdapterUbdate(data);
-            rv.setAdapter(ad);
-            rv.hasFixedSize();
-            RecyclerView.LayoutManager lm=new LinearLayoutManager(container.getContext());
-            rv.setLayoutManager(lm);
-        }
-        else{
-            String error=task.getException().getMessage();
-            Toast.makeText(getContext(), error, Toast.LENGTH_SHORT).show();
-        }
-    }
-});
+        });
         return view;
     }
 }

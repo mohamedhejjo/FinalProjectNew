@@ -9,7 +9,6 @@ public class Product {
     private String sex;
     private String image;
     private String product;
-
     public Product(String id,String name, String price, String sex,  String image, String product) {
         this.name = name;
         this.id = id;

@@ -38,15 +38,8 @@ public class deletedevice extends AppCompatActivity {
                     Iterable<DataSnapshot>data3=task.getResult().getChildren();
                     for(DataSnapshot snap:data3) {
                         Product p = snap.getValue(Product.class);
-                        if (p.getProduct().equals("laptop")){
                             data2.add(p);
-                        }else if(p.getProduct().equals("mouse")){
-                            data2.add(p);
-                        }else if(p.getProduct().equals("keyboard")){
-                            data2.add(p);
-                        }else if(p.getProduct().equals("playstation")){
-                            data2.add(p);
-                        }
+
                     }
                     RecyclerView rv=findViewById(R.id.rec11);
                     AdapterUbdate ad=new AdapterUbdate(data2);
