@@ -34,14 +34,13 @@ import java.util.UUID;
 public class adddevices extends AppCompatActivity {
 
     private ImageView adddevices;
-    static byte[] imageContentdevices;
     TextView name, price;
     Spinner spinner;
     String selected;
     Button add;
     Uri imageuri;
     public  static  final  int PICK_IMAGE=1021;
-    private ImageView addimage;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -146,6 +145,6 @@ public class adddevices extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if(requestCode==PICK_IMAGE && resultCode==RESULT_OK && data !=null){
             imageuri =data.getData();
-            addimage.setImageURI(imageuri);
+            adddevices.setImageURI(imageuri);
 
         }}}

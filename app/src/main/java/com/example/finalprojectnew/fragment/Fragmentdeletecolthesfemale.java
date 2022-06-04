@@ -34,32 +34,24 @@ public class Fragmentdeletecolthesfemale extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view= inflater.inflate(R.layout.fragmentdeletecolthesfemale, container, false);
-        data2.clear();
-        FirebaseDatabase db2=FirebaseDatabase.getInstance();
-        DatabaseReference ref2=db2.getReference("adddevice");
-        Task<DataSnapshot> task2=ref2.get();
-        task2.addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+        FirebaseDatabase db=FirebaseDatabase.getInstance();
+        DatabaseReference ref=db.getReference("addcolthes");
+        Task<DataSnapshot> task=ref.get();
+        task.addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
             @Override
             public void onComplete(@NonNull Task<DataSnapshot> task) {
                 if (task.isSuccessful()){
-                    Iterable<DataSnapshot>data3=task.getResult().getChildren();
-                    for(DataSnapshot snap:data3) {
+                    Iterable<DataSnapshot>data=task.getResult().getChildren();
+                    for(DataSnapshot snap:data) {
                         Product p = snap.getValue(Product.class);
-                        if (p.getProduct().equals("male")){
-                            if (p.getProduct().equals("jacket")){
-                                data2.add(p);
-                            }else if(p.getProduct().equals("shoe")){
-                                data2.add(p);
-                            }else if(p.getProduct().equals("jeans")){
-                                data2.add(p);
-                            }else if(p.getProduct().equals("hat")){
-                                data2.add(p);
-                            }}
-                    }
-                    RecyclerView rv=view.findViewById(R.id.rec10);
+                        String name=p.getSex();
+                        if (name.equals("female")||name.equals("أنثى")){
+                              data2.add(p);
+                            }
+                    }                    RecyclerView rv=view.findViewById(R.id.rec10);
+
                     AdapterUbdate ad=new AdapterUbdate(data2);
                     rv.setAdapter(ad);
-                    rv.hasFixedSize();
                     RecyclerView.LayoutManager lm=new LinearLayoutManager(getContext());
                     rv.setLayoutManager(lm);
                 }
