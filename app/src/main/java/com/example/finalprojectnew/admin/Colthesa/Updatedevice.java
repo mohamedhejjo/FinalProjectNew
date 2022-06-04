@@ -22,23 +22,21 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.ArrayList;
 
 public class Updatedevice extends AppCompatActivity {
-    public ArrayList<Product> data2=new ArrayList<Product>();
+    public ArrayList<Product> data2=new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.updatedevice);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        setContentView(R.layout.updatedevice);
-        data2.clear();
-        FirebaseDatabase db2=FirebaseDatabase.getInstance();
-        DatabaseReference ref2=db2.getReference("adddevice");
-        Task<DataSnapshot> task2=ref2.get();
-        task2.addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+        FirebaseDatabase db=FirebaseDatabase.getInstance();
+        DatabaseReference ref=db.getReference("adddevice");
+        Task<DataSnapshot> task=ref.get();
+        task.addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
             @Override
             public void onComplete(@NonNull Task<DataSnapshot> task) {
                 if (task.isSuccessful()){
-                    Iterable<DataSnapshot>data3=task.getResult().getChildren();
-                    for(DataSnapshot snap:data3) {
+                    Iterable<DataSnapshot>data1=task.getResult().getChildren();
+                    for(DataSnapshot snap:data1) {
                         Product p = snap.getValue(Product.class);
                                 data2.add(p);
 
@@ -46,7 +44,6 @@ public class Updatedevice extends AppCompatActivity {
                     RecyclerView rv=findViewById(R.id.rec6);
                     AdapterUbdate ad=new AdapterUbdate(data2);
                     rv.setAdapter(ad);
-                    rv.hasFixedSize();
                     RecyclerView.LayoutManager lm=new LinearLayoutManager(getApplicationContext());
                     rv.setLayoutManager(lm);
                 }

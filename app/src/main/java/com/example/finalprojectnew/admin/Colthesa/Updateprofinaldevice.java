@@ -15,6 +15,7 @@ import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.example.finalprojectnew.Class.Product;
 import com.example.finalprojectnew.R;
 
 import java.io.ByteArrayOutputStream;
@@ -36,7 +37,12 @@ public class Updateprofinaldevice extends AppCompatActivity {
             name = findViewById(R.id.ufina1);
             price = findViewById(R.id.ufina2);
             update = findViewById(R.id.Updatecreatedivaec);
-            spinner = findViewById(R.id.spinner4);
+            Intent intent=getIntent();
+            Product csp=(Product)intent.getSerializableExtra("productupdate");
+
+//        addimage.setImageURI(equals(csp.getImage()));
+            name.setText(csp.getName());
+            price.setText(""+csp.getPrice()+"$");
 
             update.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -44,9 +50,9 @@ public class Updateprofinaldevice extends AppCompatActivity {
                     String name1 = name.getText().toString();
                     String price1 = price.getText().toString();
                     if (name1.isEmpty()) {
-                        name.setError("can not be empty");
+                        name.setError("name not be empty");
                     } else if (price1.isEmpty()) {
-                        price.setError("can not be empty");
+                        price.setError("price not be empty");
                     } else {
                     }
                 }

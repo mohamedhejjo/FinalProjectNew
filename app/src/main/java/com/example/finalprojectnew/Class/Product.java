@@ -2,7 +2,9 @@ package com.example.finalprojectnew.Class;
 
 import android.net.Uri;
 
-public class Product {
+import java.io.Serializable;
+
+public class Product implements Serializable {
     private String id;
     private String name;
     private String price;

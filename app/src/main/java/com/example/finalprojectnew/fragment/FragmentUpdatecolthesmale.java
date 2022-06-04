@@ -45,7 +45,8 @@ public class FragmentUpdatecolthesmale extends Fragment {
                     for(DataSnapshot snap:data1) {
                         Product p = snap.getValue(Product.class);
                         String name=p.getSex();
-                        if (name.equals("male")||name.equals("ذكر")){
+                        String male=getString(R.string.male);
+                        if (name.equals(male)){
                             data.add(p);
                         }
                     }                    RecyclerView rv=view.findViewById(R.id.rec8);

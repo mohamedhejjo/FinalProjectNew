@@ -53,8 +53,8 @@ public class AdapterCotr extends RecyclerView.Adapter<HolderCotr> {
                 String fshoe= context.getString(R.string.fshoe);
                 String fdress= context.getString(R.string.fdress);
                 String fhat= context.getString(R.string.fhat);
-                String jacket=context.getString(R.string.fjacket);
-                String shoe= context.getString(R.string.fshoe);
+                String jacket=context.getString(R.string.jacket);
+                String shoe= context.getString(R.string.shoe);
                 String jeans= context.getString(R.string.jeans);
                 String hat= context.getString(R.string.hat);
                 String clothes= context.getString(R.string.app_name4);

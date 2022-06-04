@@ -26,7 +26,7 @@ public class deletefinal extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 View view;
         Intent intent=getIntent();
-        Product csp=(Product)intent.getSerializableExtra("ClassShowPrice");
+        Product csp=(Product)intent.getSerializableExtra("productdelete");
         ImageView imag=findViewById(R.id.imageuserdelete);
         TextView Name=findViewById(R.id.nameuserdelete);
         TextView price=findViewById(R.id.priceuserdelete);

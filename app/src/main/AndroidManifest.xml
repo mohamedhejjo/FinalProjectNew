@@ -95,12 +95,12 @@
         <activity
             android:name=".user.Clothes.userfemale"
             android:exported="false"
-            android:label="@string/app_name8"
+            android:label="@string/app_name51"
             android:parentActivityName=".user.Categories.clothes" />
         <activity
             android:name=".user.Clothes.usermale"
             android:exported="false"
-            android:label="@string/app_name7"
+            android:label="@string/app_name41"
             android:parentActivityName=".user.Categories.clothes" />
         <activity
             android:name=".user.Categories.devices"

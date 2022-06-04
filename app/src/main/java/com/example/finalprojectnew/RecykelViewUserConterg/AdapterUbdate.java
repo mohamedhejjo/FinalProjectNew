@@ -13,6 +13,7 @@ import com.bumptech.glide.Glide;
 import com.example.finalprojectnew.Class.Product;
 import com.example.finalprojectnew.R;
 import com.example.finalprojectnew.admin.Colthesa.Updateprofinalcolthes;
+import com.example.finalprojectnew.admin.Colthesa.Updateprofinaldevice;
 
 import java.util.ArrayList;
 
@@ -41,15 +42,26 @@ public class AdapterUbdate extends RecyclerView.Adapter<HolderShowPrice> {
         holder.pro.setText(csp.getProduct());
         holder.female.setText(csp.getSex());
 
-        holder.view.setOnClickListener(new View.OnClickListener() {
+        holder.item.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String male= context.getString(R.string.male);
+String name=csp.getProduct();
+
                 String female= context.getString(R.string.female);
-                if (csp.getSex().equals(female)||csp.getSex().equals(male)){
-                    Intent intent=new Intent(context, Updateprofinalcolthes.class);
+                String male= context.getString(R.string.male);
+
+                if (csp.getSex().equals(female)||csp.getSex().equals(male)
+                    ) {
+                    Intent intent = new Intent(context, Updateprofinalcolthes.class);
+                    intent.putExtra("productupdate", csp);
                     context.startActivity(intent);
-                } }
+                } else if(!(csp.getSex().equals(female)||csp.getSex().equals(male)
+                        )){
+                    Intent intent = new Intent(context, Updateprofinaldevice.class);
+                    intent.putExtra("productupdate", csp);
+                    context.startActivity(intent);
+                    }
+                }
         });
     }
 

@@ -16,6 +16,7 @@ import com.example.finalprojectnew.Class.Product;
 import com.example.finalprojectnew.R;
 import com.example.finalprojectnew.admin.Colthesa.deletefinal;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 public class Adapterdelete extends RecyclerView.Adapter<Holderdelete> {
@@ -44,12 +45,18 @@ public class Adapterdelete extends RecyclerView.Adapter<Holderdelete> {
         holder.view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String male= context.getString(R.string.male);
+                String laptop= context.getString(R.string.laptop);
+                String PlayStation= context.getString(R.string.playstation);
+                String mouse= context.getString(R.string.mouse);
+                String keyboard= context.getString(R.string.keyboard);
                 String female= context.getString(R.string.female);
-                if (csp.getSex().equals(female)||csp.getSex().equals(male)
+                String male= context.getString(R.string.male);
+                if (csp.getSex().equals(female)||csp.getSex().equals(male)||
+                        csp.getProduct().equals(laptop)||csp.getProduct().equals(mouse)||
+                        csp.getProduct().equals(keyboard)||csp.getProduct().equals(PlayStation)
                 ){
                     Intent intent=new Intent(context, deletefinal.class);
-                    intent.putExtra("product", (Parcelable) csp);
+                    intent.putExtra("productdelete",  csp);
                     context.startActivity(intent);
                 } }
         });

@@ -16,6 +16,7 @@ import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.example.finalprojectnew.Class.Product;
 import com.example.finalprojectnew.R;
 
 import java.io.ByteArrayOutputStream;
@@ -42,15 +43,21 @@ public class Updateprofinalcolthes extends AppCompatActivity {
         name=findViewById(R.id.ufco1);
         price=findViewById(R.id.ufco2);
         update=findViewById(R.id.Updatecreate);
+        Intent intent=getIntent();
+        Product csp=(Product)intent.getSerializableExtra("productupdate");
+
+//        addimage.setImageURI(equals(csp.getImage()));
+        name.setText(csp.getName());
+        price.setText(""+csp.getPrice()+"$");
         update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String name1=name.getText().toString();
                 String price1=price.getText().toString();
                 if (name1.isEmpty()){
-                    name.setError("can not be empty");  }
+                    name.setError("name not be empty");  }
                 else if (price1.isEmpty()){
-                    price.setError("can not be empty");  }
+                    price.setError("price not be empty");  }
                 else{}
             }
 
