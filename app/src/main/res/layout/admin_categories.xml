@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
  android:orientation="vertical"
     android:foreground="@drawable/design_header"
-
     tools:context=".admin.adminCategories">
 
     <com.airbnb.lottie.LottieAnimationView

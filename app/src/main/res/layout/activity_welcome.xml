@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".welcome"
+    android:foreground="@drawable/design_header2"
+    android:background="@color/white"
+
+
+    android:orientation="vertical">
+
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/cover"
+        android:scaleType="fitXY"
+        />
+    <TextView
+        android:foreground="@drawable/design_header3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/GazaStore"
+        android:textSize="55dp"
+        android:fontFamily="@font/against_history"
+        android:gravity="center"
+        android:textColor="#9CB8EF"
+        android:layout_marginBottom="30dp"     />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/stronggirls_demo"
+        android:layout_marginBottom="50dp"
+        android:textSize="25dp"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:textColor="#673AB7"
+        android:text="@string/WelcomeToGaza"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="150dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/wmale" />
+        <TextView
+            android:layout_width="145dp"
+            android:layout_height="150dp"
+            android:fontFamily="@font/against_history"
+            android:textSize="25dp"
+            android:gravity="center_horizontal"
+            android:scaleType="fitXY"
+            android:textColor="#673AB7"
+            android:text="@string/Wearehappy"
+            />
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="150dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/wfemale"
+            />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        >
+        <ImageView
+            android:layout_margin="20dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_baseline_person_24"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Loginasuser"
+            android:textSize="25dp"
+            android:textColor="#673AB7"
+            android:fontFamily="@font/playfairdisplay_bold"
+            android:layout_gravity="center"
+            />
+
+
+        <ImageButton
+            android:id="@+id/next"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="fitXY"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="60dp"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/next"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <ImageView
+            android:layout_margin="20dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_baseline_admin_panel_settings_24"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Loginadmin"
+            android:textSize="25dp"
+            android:textColor="#673AB7"
+            android:fontFamily="@font/playfairdisplay_bold"
+            android:layout_gravity="center"
+            />
+
+        <ImageButton
+            android:id="@+id/next2"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="fitXY"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="@color/white"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="60dp"
+            android:src="@drawable/next"
+            />
+    </LinearLayout>
+
+
+
+
+
+
+
+</LinearLayout>

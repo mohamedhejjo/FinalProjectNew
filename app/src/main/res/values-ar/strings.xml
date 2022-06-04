@@ -80,5 +80,14 @@
     <string name="hat">طاقية</string>
     <string name="price1">السعر</string>
     <string name="language">اللغة</string>
+    <string name="GazaStore">متجر غزة</string>
+    <string name="WelcomeToGaza">مرحبا بك في تطبيق متجر غزة , تصفحنا الان</string>
+    <string name="Wearehappy">يسعدنا زيارتك لنا ، متجرنا هو بيع ملابس رجال و نساء</string>
+    .    <string name="Loginasuser"> الدخول كمستخدم</string>
+    .    <string name="Loginadmin"> الدخول كمسؤول</string>
+
+
+
+
 
 </resources>

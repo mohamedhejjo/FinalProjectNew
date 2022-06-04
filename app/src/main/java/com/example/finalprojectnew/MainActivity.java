@@ -13,8 +13,6 @@ import android.view.MenuItem;
 
 import com.example.finalprojectnew.ViewPageradmin.Mytabadmin;
 import com.example.finalprojectnew.ViewPageradmin.adapterpaferadmin;
-import com.example.finalprojectnew.fragment.mainadmin;
-import com.example.finalprojectnew.fragment.mainuser;
 import com.google.android.material.tabs.TabLayout;
 
 import java.util.Locale;
@@ -32,8 +30,7 @@ public class MainActivity extends AppCompatActivity {
         String admin=getString(R.string.app_name1);
         String user=getString(R.string.app_name2);
         adapterpaferadmin adapter=new adapterpaferadmin(getSupportFragmentManager());
-        adapter.addtaps(new Mytabadmin( new mainadmin(),admin));
-        adapter.addtaps(new Mytabadmin(new mainuser(),user));
+
         viewPager.setAdapter(adapter);
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
@@ -74,28 +71,4 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        int id=item.getItemId();
-        if(id==R.id.Arabic){
-            setLocale("ar");
-
-        }else if(id==R.id.Einglish){
-            setLocale("en");
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-    @SuppressWarnings("deprecation")
-    public  void setLocale(String lang){
-        Locale mylocale=new Locale(lang);
-        DisplayMetrics dm=getResources().getDisplayMetrics();
-        Configuration conf=getResources().getConfiguration();
-        conf.locale=mylocale;
-        getResources().updateConfiguration(conf,dm);
-        Intent intent=new Intent(getApplicationContext(), MainActivity.class);
-        startActivity(intent);
-        finish();
-
-    }
 }

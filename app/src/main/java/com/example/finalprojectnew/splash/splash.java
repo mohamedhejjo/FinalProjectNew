@@ -9,6 +9,7 @@ import android.view.WindowManager;
 
 import com.example.finalprojectnew.MainActivity;
 import com.example.finalprojectnew.R;
+import com.example.finalprojectnew.welcome;
 
 public class splash extends AppCompatActivity {
 
@@ -20,7 +21,7 @@ public class splash extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent=new Intent(splash.this, MainActivity.class);
+                Intent intent=new Intent(splash.this, welcome.class);
                 startActivity(intent);
                 finish();
             }
