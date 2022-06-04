@@ -27,7 +27,7 @@ import java.util.ArrayList;
 
 
 public class FragmentadminUpdate extends Fragment {
-    EditText numberold,passwordold,numbernew,passwordnew;
+    EditText numberold,passwordold,numbernew,passwordnew,email;
     Button btn;
 
     @Override
@@ -39,6 +39,7 @@ public class FragmentadminUpdate extends Fragment {
         passwordold=view.findViewById(R.id.uadmin3);
         numbernew=view.findViewById(R.id.uadmin2);
         passwordnew=view.findViewById(R.id.uadmin4);
+        email=view.findViewById(R.id.uadminemail);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -46,17 +47,19 @@ public class FragmentadminUpdate extends Fragment {
                 String passwordold1=passwordold.getText().toString();
                 String numbernew1=numbernew.getText().toString();
                 String passwordnew1=passwordnew.getText().toString();
+                String email1=email.getText().toString();
                 if (numberold1.isEmpty()){
-                    numberold.setError("can not be empty"); }
+                    numberold.setError("numberold not be empty"); }
                 else if(passwordold1.isEmpty()){
-                    passwordold.setError("can not be empty");  }
+                    passwordold.setError("passwordold not be empty");  }
 
                 else if(numbernew1.isEmpty()){
-                    numbernew.setError("can not be empty");  }
+                    numbernew.setError("numbernew not be empty");  }
 
                 else if(passwordnew1.isEmpty()){
-                    passwordnew.setError("can not be empty"); }
-
+                    passwordnew.setError("passwordnew not be empty"); }
+                else if(email1.isEmpty()){
+                    passwordnew.setError("email not be empty"); }
                 else {
                     FirebaseDatabase db=FirebaseDatabase.getInstance();
                     DatabaseReference ref=db.getReference("Admin");
@@ -69,7 +72,7 @@ public class FragmentadminUpdate extends Fragment {
                                 for(DataSnapshot snap:data) {
                                     Admin p=snap.getValue(Admin.class);
                                     if(p.getNumber().equals(numberold1)&&p.getPassword().equals(passwordold1)){
-                                        Admin admins=new Admin(numbernew1,passwordnew1);
+                                        Admin admins=new Admin(numbernew1,passwordnew1,email1);
                                         admins.setId(p.getId());
                                  ref.child(p.getId()).setValue(admins);
 
@@ -77,6 +80,8 @@ public class FragmentadminUpdate extends Fragment {
                                         passwordold.setText("");
                                         numbernew.setText("");
                                         passwordnew.setText("");
+                                        email.setText("");
+
                                     }
                                 }
                             } else{

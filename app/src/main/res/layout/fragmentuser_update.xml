@@ -17,8 +17,8 @@
         android:id="@+id/fieldnumberusloginold"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
-        android:layout_height="92dp"
-        android:layout_margin="10dp"
+        android:layout_height="85dp"
+        android:layout_margin="5dp"
         android:hint="@string/nameold"
         app:counterEnabled="true"
         app:counterMaxLength="20"
@@ -34,7 +34,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/uuser1"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="65dp"
             android:maxLength="20" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -42,8 +42,8 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/fieldpassuserloginold"
         android:layout_width="match_parent"
-        android:layout_height="92dp"
-        android:layout_margin="10dp"
+        android:layout_height="85dp"
+        android:layout_margin="5dp"
         android:hint="@string/namenew"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         app:counterEnabled="true"
@@ -61,7 +61,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/uuser2"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="65dp"
             android:inputType="text"
             android:maxLength="20" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -69,8 +69,8 @@
         android:id="@+id/fieldnumberusloginnew"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
-        android:layout_height="92dp"
-        android:layout_margin="10dp"
+        android:layout_height="85dp"
+        android:layout_margin="5dp"
         android:hint="@string/passwordold"
         app:counterEnabled="true"
         app:counterMaxLength="20"
@@ -86,7 +86,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/uuser3"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="65dp"
             android:maxLength="20" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -94,8 +94,8 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/fieldpassuserloginnew"
         android:layout_width="match_parent"
-        android:layout_height="92dp"
-        android:layout_margin="10dp"
+        android:layout_height="85dp"
+        android:layout_margin="5dp"
         android:hint="@string/passwordnew"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         app:counterEnabled="true"
@@ -113,16 +113,40 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/uuser4"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="65dp"
             android:inputType="numberPassword"
             android:maxLength="20" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:layout_margin="5dp"
+        android:hint="@string/email"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:counterEnabled="true"
+        app:counterMaxLength="40"
+        app:boxCornerRadiusBottomEnd="20dp"
+        app:boxCornerRadiusBottomStart="20dp"
+        app:boxCornerRadiusTopEnd="20dp"
+        app:boxCornerRadiusTopStart="20dp"
+        app:endIconMode="clear_text"
+        app:helperText="Required*"
+        app:helperTextTextColor="@color/red"
+        app:startIconDrawable="@drawable/email"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/uuseremail"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:maxLength="40" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/updateuser"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_margin="10dp"
+        android:layout_height="60dp"
+        android:layout_margin="5dp"
         android:layout_marginBottom="324dp"
         android:background="@drawable/btnadmin"
         android:backgroundTint="@color/color_bg_Clibrary"

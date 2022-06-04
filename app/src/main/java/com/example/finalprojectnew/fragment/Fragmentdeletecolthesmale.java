@@ -48,7 +48,7 @@ public class Fragmentdeletecolthesmale extends Fragment {
                             }
                     }
                     RecyclerView rv=view.findViewById(R.id.rec9);
-                    AdapterUbdate ad=new AdapterUbdate(data2);
+                    Adapterdelete ad=new Adapterdelete(data2);
                     rv.setAdapter(ad);
                     RecyclerView.LayoutManager lm=new LinearLayoutManager(getContext());
                     rv.setLayoutManager(lm);

@@ -8,10 +8,11 @@ public class Admin {
     public Admin(){
     }
 
-    public Admin( String number, String password) {
+    public Admin( String number, String password,String email) {
         this.id = id;
         this.number = number;
         this.password = password;
+        this.email=email;
     }
 
     public Admin(String id, String number, String email, String password) {

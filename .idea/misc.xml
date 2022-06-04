@@ -3,44 +3,6 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/al/AndroidStudioProjects/FinalProjectNew/app/src/main/res/drawable/btnadmin.xml" value="0.1945" />
-        <entry key="..\:/Users/al/AndroidStudioProjects/FinalProjectNew/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.1" />
-        <entry key="..\:/Users/al/AndroidStudioProjects/FinalProjectNew/app/src/main/res/drawable/shape_corner.xml" value="0.1" />
-        <entry key="..\:/Users/al/AndroidStudioProjects/FinalProjectNew/app/src/main/res/layout/activityuserfinal.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/al/AndroidStudioProjects/FinalProjectNew/app/src/main/res/layout/add.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/al/AndroidStudioProjects/FinalProjectNew/app/src/main/res/layout/addcolthes.xml" value="0.25" />
-        <entry key="..\:/Users/al/AndroidStudioProjects/FinalProjectNew/app/src/main/res/layout/adddevices.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/al/AndroidStudioProjects/FinalProjectNew/app/src/main/res/layout/admin.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/al/AndroidStudioProjects/FinalProjectNew/app/src/main/res/layout/admin_categories.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/al/AndroidStudioProjects/FinalProjectNew/app/src/main/res/layout/clothes.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/al/AndroidStudioProjects/FinalProjectNew/app/src/main/res/layout/dalatedevice.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/al/AndroidStudioProjects/FinalProjectNew/app/src/main/res/layout/delete.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/al/AndroidStudioProjects/FinalProjectNew/app/src/main/res/layout/deletecolthes.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/al/AndroidStudioProjects/FinalProjectNew/app/src/main/res/layout/deletefinal.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/al/AndroidStudioProjects/FinalProjectNew/app/src/main/res/layout/devices.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/al/AndroidStudioProjects/FinalProjectNew/app/src/main/res/layout/fragmentadmin_create.xml" value="0.25" />
-        <entry key="..\:/Users/al/AndroidStudioProjects/FinalProjectNew/app/src/main/res/layout/fragmentadmin_update.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/al/AndroidStudioProjects/FinalProjectNew/app/src/main/res/layout/fragmentadminlogin.xml" value="0.25" />
-        <entry key="..\:/Users/al/AndroidStudioProjects/FinalProjectNew/app/src/main/res/layout/fragmentdeletecolthesfemale.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/al/AndroidStudioProjects/FinalProjectNew/app/src/main/res/layout/fragmentdeletecolthesmale.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/al/AndroidStudioProjects/FinalProjectNew/app/src/main/res/layout/fragmentupdatecolthesmale.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/al/AndroidStudioProjects/FinalProjectNew/app/src/main/res/layout/fragmentuser_create.xml" value="0.10461956521739131" />
-        <entry key="..\:/Users/al/AndroidStudioProjects/FinalProjectNew/app/src/main/res/layout/fragmentuser_update.xml" value="0.22" />
-        <entry key="..\:/Users/al/AndroidStudioProjects/FinalProjectNew/app/src/main/res/layout/fragmentuserlogin.xml" value="0.1" />
-        <entry key="..\:/Users/al/AndroidStudioProjects/FinalProjectNew/app/src/main/res/layout/itemde.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/al/AndroidStudioProjects/FinalProjectNew/app/src/main/res/layout/itemshowprice.xml" value="0.1" />
-        <entry key="..\:/Users/al/AndroidStudioProjects/FinalProjectNew/app/src/main/res/layout/mainadmin.xml" value="0.1" />
-        <entry key="..\:/Users/al/AndroidStudioProjects/FinalProjectNew/app/src/main/res/layout/mainuser.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/al/AndroidStudioProjects/FinalProjectNew/app/src/main/res/layout/price.xml" value="0.25" />
-        <entry key="..\:/Users/al/AndroidStudioProjects/FinalProjectNew/app/src/main/res/layout/update.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/al/AndroidStudioProjects/FinalProjectNew/app/src/main/res/layout/updatecolthes.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/al/AndroidStudioProjects/FinalProjectNew/app/src/main/res/layout/updatecolthesfemale.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/al/AndroidStudioProjects/FinalProjectNew/app/src/main/res/layout/updatedevice.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/al/AndroidStudioProjects/FinalProjectNew/app/src/main/res/layout/updateprofinalcolthes.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/al/AndroidStudioProjects/FinalProjectNew/app/src/main/res/layout/updateprofinaldevice.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/al/AndroidStudioProjects/FinalProjectNew/app/src/main/res/layout/user.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/al/AndroidStudioProjects/FinalProjectNew/app/src/main/res/layout/user_categories.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/al/AndroidStudioProjects/FinalProjectNew/app/src/main/res/layout/usermale.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2203125" />
         <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/drawable/baseline.xml" value="0.11197916666666667" />
         <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/drawable/btnadmin.xml" value="0.11197916666666667" />
@@ -53,6 +15,7 @@
         <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/drawable/name.xml" value="0.2203125" />
         <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/drawable/number.xml" value="0.14629629629629629" />
         <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/drawable/pass.xml" value="0.2203125" />
+        <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/drawable/shape_corner.xml" value="0.2203125" />
         <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/drawable/text.xml" value="0.2203125" />
         <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/activityuserfinal.xml" value="0.1" />
@@ -66,9 +29,10 @@
         <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/delete.xml" value="0.1" />
         <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/deletecolthes.xml" value="0.1" />
         <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/deletefinal.xml" value="0.1" />
+        <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/deleteitem.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/devices.xml" value="0.1" />
         <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/fragmentadmin_create.xml" value="0.1" />
-        <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/fragmentadmin_update.xml" value="0.1" />
+        <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/fragmentadmin_update.xml" value="0.15" />
         <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/fragmentadminlogin.xml" value="0.1" />
         <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/fragmentdeletecolthesfemale.xml" value="0.1" />
         <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/fragmentdeletecolthesmale.xml" value="0.1" />
