@@ -43,7 +43,9 @@ public class Fragmentdeletecolthesmale extends Fragment {
                     Iterable<DataSnapshot>data3=task.getResult().getChildren();
                     for(DataSnapshot snap:data3) {
                         Product p = snap.getValue(Product.class);
-                       if (p.getSex().equals("male")||p.getSex().equals("ذكر")){
+
+                        String male= getString(R.string.male);
+                       if (p.getSex().equals(male)){
                                 data2.add(p);
                             }
                     }

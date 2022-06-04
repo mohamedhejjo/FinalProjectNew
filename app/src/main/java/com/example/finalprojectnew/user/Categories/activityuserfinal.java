@@ -12,7 +12,6 @@ import android.widget.Toast;
 import com.example.finalprojectnew.Class.Product;
 import com.example.finalprojectnew.R;
 import com.example.finalprojectnew.RecykelViewUserConterg.Adapterfinaluser;
-import com.example.finalprojectnew.RecykelViewUserConterg.ClassShowPrice;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
@@ -24,8 +23,13 @@ import java.util.ArrayList;
 public class activityuserfinal extends AppCompatActivity {
    public ArrayList<Product> data2=new ArrayList<Product>();
     FirebaseDatabase db=FirebaseDatabase.getInstance();
-    Intent intent=getIntent();
-    String pro=intent.getStringExtra("finaluser");
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activityuserfinal);
+        Intent intent=getIntent();
+        String name=intent.getStringExtra("finaluser");
         String laptop=getString(R.string.laptop);
         String mouse=getString(R.string.mouse);
         String keyboard= getString(R.string.keyboard);
@@ -34,14 +38,11 @@ public class activityuserfinal extends AppCompatActivity {
         String fshoe= getString(R.string.fshoe);
         String fdress= getString(R.string.fdress);
         String fhat= getString(R.string.fhat);
-        String jacket=getString(R.string.fjacket);
-        String shoe= getString(R.string.fshoe);
+        String jackets=getString(R.string.jacket);
+        String shoes= getString(R.string.shoe);
         String jeans= getString(R.string.jeans);
         String hat= getString(R.string.hat);
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activityuserfinal);
+
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         DatabaseReference ref=db.getReference("addcolthes");
         Task<DataSnapshot> task=ref.get();
@@ -52,27 +53,37 @@ public class activityuserfinal extends AppCompatActivity {
 Iterable<DataSnapshot>data=task.getResult().getChildren();
 for(DataSnapshot snap:data){
     Product p=snap.getValue(Product.class);
-   if(p.getSex().equals("female")||p.getSex().equals("أنثى")){
-       if (p.getProduct().equals("fjacket")||p.getProduct().equals("جاكيت")||pro.equals(fjacket)){
-           data2.add(p);
-       }else if(p.getProduct().equals("fshoe")||p.getProduct().equals("حذاء")||pro.equals(fshoe)){
-           data2.add(p);
-       }else if(p.getProduct().equals("fdress")||p.getProduct().equals("فستان")||pro.equals(fdress)){
-           data2.add(p);
-       }else if(p.getProduct().equals("fhat")||p.getProduct().equals("طاقية")||pro.equals(fdress)){
-           data2.add(p);
+       if(name.equals(fjacket)){
+       if (p.getProduct().equals(".jacket")||p.getProduct().equals(".جاكيت")){
+           data2.add(p);}
+       setTitle(fjacket);
+       }
+       if (name.equals(fshoe)){
+            if(p.getProduct().equals(".shoe")||p.getProduct().equals("حذاء.")){
+           data2.add(p);}
+           setTitle(fshoe);
+       }if(name.equals(fdress)) {if(p.getProduct().equals(".dress")||p.getProduct().equals(".فستان")){
+           data2.add(p);}
+           setTitle(fdress);
+       }if(name.equals(fhat)){ if(p.getProduct().equals(".hat")||p.getProduct().equals("طاقية.")){
+           data2.add(p);}
+           setTitle(fhat);
        }
 
-   } if(p.getSex().equals("male")||p.getSex().equals("ذكر")){
-        if (p.getProduct().equals("jacket")||p.getProduct().equals("جاكيت")||pro.equals(jacket)){
-            data2.add(p);
-        }else if(p.getProduct().equals("jeans")||p.getProduct().equals("بنطلون")||pro.equals(jeans)){
-            data2.add(p);
-        }else if(p.getProduct().equals("shoe")||p.getProduct().equals("حذاء")||pro.equals(shoe)){
-            data2.add(p);
-        }else if(p.getProduct().equals("hat")||p.getProduct().equals("طاقية")||pro.equals(hat)){
-            data2.add(p);
-        }
+
+       if(name.equals(jackets)){
+           if (p.getProduct().equals("jacket")||p.getProduct().equals("جاكيت")){
+            data2.add(p);}setTitle(jackets);
+        }if(name.equals(jeans)){
+           if(p.getProduct().equals("jeans")||p.getProduct().equals("بنطلون")){
+            data2.add(p);}setTitle(jeans);
+        }if(name.equals(shoes)){
+           if(p.getProduct().equals("shoe")||p.getProduct().equals("حذاء")){
+            data2.add(p);}setTitle(shoes);
+        }if(name.equals(hat)){
+           if(p.getProduct().equals("hat")||p.getProduct().equals("طاقية")){
+            data2.add(p);}setTitle(hat);
+
     }
 } RecyclerView rv=findViewById(R.id.recy1);
                     Adapterfinaluser ad=new Adapterfinaluser(data2);
@@ -95,19 +106,18 @@ for(DataSnapshot snap:data){
                     Iterable<DataSnapshot>data3=task.getResult().getChildren();
                 for(DataSnapshot snap:data3) {
                     Product p = snap.getValue(Product.class);
-                    if (p.getProduct().equals("laptop")||p.getProduct().equals("لابتوب")||pro.equals(laptop)){
-                        data2.add(p);
-                    }else if(p.getProduct().equals("mouse")||p.getProduct().equals("ماوس")||pro.equals(mouse)){
-                        data2.add(p);
-                    }else if(p.getProduct().equals("keyboard")||p.getProduct().equals("كيبورد")||pro.equals(keyboard)){
-                        data2.add(p);
-                    }else if(p.getProduct().equals("playstation")||p.getProduct().equals("بلاستيشن")||pro.equals(playstation)){
-                        data2.add(p);
+                 if(name.equals(laptop)){   if (p.getProduct().equals("laptop")||p.getProduct().equals("لابتوب")){
+                        data2.add(p);}setTitle(laptop);
+                    }if(name.equals(mouse)){ if(p.getProduct().equals("mouse")||p.getProduct().equals("ماوس")){
+                        data2.add(p);}setTitle(mouse);
+                    }if(name.equals(keyboard)){ if(p.getProduct().equals("keyboard")||p.getProduct().equals("كيبورد")){
+                        data2.add(p);}setTitle(keyboard);
+                    }if(name.equals(playstation)){ if(p.getProduct().equals("playstation")||p.getProduct().equals("بلاستيشن")){
+                        data2.add(p);}setTitle(playstation);
                     }
                 } RecyclerView rv=findViewById(R.id.recy1);
                     Adapterfinaluser ad=new Adapterfinaluser(data2);
                     RecyclerView.LayoutManager lm=new LinearLayoutManager(getApplicationContext());
-
                     rv.setAdapter(ad);
            rv.setLayoutManager(lm);
                 }

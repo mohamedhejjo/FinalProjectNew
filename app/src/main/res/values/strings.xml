@@ -4,7 +4,9 @@
     <string name="app_name2">user</string>
     <string name="app_name3">items</string>
     <string name="app_name4">clothes</string>
-    <string name="app_name5">Update</string>
+    <string name="app_name5">device</string>
+    <string name="app_name41">male</string>
+    <string name="app_name51">female</string>
     <string name="app_name6">delete</string>
     <string name="app_name7">AddDevice</string>
     <string name="app_name8">AddColthes</string>
@@ -60,12 +62,12 @@
     <string name="laptop">laptop</string>
     <string name="mouse">mouse</string>
     <string name="keyboard">keyboard</string>
-    <string name="playstation">playstation</string>
+    <string name="playstation">Play Station</string>
 
-    <string name="fjacket">jacket</string>
-    <string name="fshoe">shoe</string>
-    <string name="fdress">dress</string>
-    <string name="fhat">hat</string>
+    <string name="fjacket">.jacket</string>
+    <string name="fshoe">.shoe</string>
+    <string name="fdress">.dress</string>
+    <string name="fhat">.hat</string>
 
     <string name="jacket">jacket</string>
     <string name="pric">price</string>

@@ -5,8 +5,6 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -18,21 +16,14 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.finalprojectnew.Class.Admin;
 import com.example.finalprojectnew.Class.Product;
 import com.example.finalprojectnew.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.StorageReference;
-import com.google.firebase.storage.UploadTask;
 
-import java.io.ByteArrayOutputStream;
-import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.UUID;
 
 public class addcolthes extends AppCompatActivity {
     Spinner spinner1;
@@ -41,7 +32,7 @@ public class addcolthes extends AppCompatActivity {
     Button add;
     String selected1;
     String selected2;
-    Uri imageuri;
+    Uri selectedimage;
 public  static  final  int PICK_IMAGE=1021;
     private ImageView addimage;
     @Override
@@ -56,73 +47,58 @@ public  static  final  int PICK_IMAGE=1021;
         price=findViewById(R.id.acol2);
         add=findViewById(R.id.addcreate);
         add.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String name1=name.getText().toString();
-                String price1=price.getText().toString();
-                if (name1.isEmpty()){
-                    name.setError("name not be empty");}
-                else if(price1.isEmpty()){
-                    price.setError("price not be empty");}
-                else if(imageuri !=null){
-                    FirebaseStorage storage=FirebaseStorage.getInstance();
-                    StorageReference ref=storage.getReference("images/"+ UUID.randomUUID().toString());
-                    ref.putFile(imageuri).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
-                        @Override
-                        public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
-                           if (task.isSuccessful()){
-                               ref.getDownloadUrl().addOnCompleteListener(new OnCompleteListener<Uri>() {
                                    @Override
-                                   public void onComplete(@NonNull Task<Uri> task) {
-                                    if (task.isSuccessful())  {
-                                        String image=task.getResult().toString();
-                                        FirebaseDatabase db= FirebaseDatabase.getInstance();
-                                        DatabaseReference dr=db.getReference("addcolthes");
-                                        String id=dr.push().getKey();
-                                        Product product=new Product(id,name1,price1,selected1,image,selected2);
-                                        dr.child(id).setValue(product).addOnCompleteListener(new OnCompleteListener<Void>() {
-                                            @Override
-                                            public void onComplete(@NonNull Task<Void> task) {
-                                                if (task.isSuccessful()){
-                                                    Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_SHORT).show();
+                                   public void onClick(View view) {
+                                       String name1 = name.getText().toString();
+                                       String price1 = price.getText().toString();
+                                       if (name1.isEmpty()) {
+                                           name.setError("name not be empty");
+                                       } else if (price1.isEmpty()) {
+                                           price.setError("price not be empty");
+                                       } else {
+                                           if (selectedimage != null) {
+                                               FirebaseDatabase db = FirebaseDatabase.getInstance();
+                                               DatabaseReference dr = db.getReference("addcolthes");
+                                               String id = dr.push().getKey();
+                                               Product product = new Product(id, name1, price1, selected1, "image", selected2);
+                                               dr.child(id).setValue(product).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                                   @Override
+                                                   public void onComplete(@NonNull Task<Void> task) {
+                                                       if (task.isSuccessful()) {
+                                                           Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_SHORT).show();
 
-                                                }else{
-                                                    Toast.makeText(getApplicationContext(), "Failed", Toast.LENGTH_SHORT).show();
-                                                }
-                                                name.setText("");
-                                                price.setText("");
-                                            }
-                                        });
-                                    }
-                                   }
+                                                       } else {
+                                                           Toast.makeText(getApplicationContext(), "Failed", Toast.LENGTH_SHORT).show();
+                                                       }
+                                                       name.setText("");
+                                                       price.setText("");
+
+                                                   }
+                                               });
+                                           }else{
+                                                   FirebaseDatabase db= FirebaseDatabase.getInstance();
+                                                   DatabaseReference dr=db.getReference("addcolthes");
+                                                   String id=dr.push().getKey();
+                                                   Product product=new Product(id,name1,price1,selected1,"image",selected2);
+                                                   dr.child(id).setValue(product).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                                       @Override
+                                                       public void onComplete(@NonNull Task<Void> task) {
+                                                           if (task.isSuccessful()){
+                                                               Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_SHORT).show();
+
+                                                           }else{
+                                                               Toast.makeText(getApplicationContext(), "Failed", Toast.LENGTH_SHORT).show();
+                                                           }
+                                                           name.setText("");
+                                                           price.setText("");
+
+                                                       }
+                                                   });}
+                                           }
+                                       }
+
                                });
-                           }else{
-                               Toast.makeText(getApplicationContext(), "Uplooad image failed", Toast.LENGTH_SHORT).show();
-                           }
-                        }
-                    });
-                }
-                else{
-                    FirebaseDatabase db= FirebaseDatabase.getInstance();
-                    DatabaseReference dr=db.getReference("addcolthes");
-                    String id=dr.push().getKey();
-                    Product product=new Product(id,name1,price1,selected1,"image",selected2);
-                    dr.child(id).setValue(product).addOnCompleteListener(new OnCompleteListener<Void>() {
-                        @Override
-                        public void onComplete(@NonNull Task<Void> task) {
-                            if (task.isSuccessful()){
-                                Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_SHORT).show();
 
-                            }else{
-                                Toast.makeText(getApplicationContext(), "Failed", Toast.LENGTH_SHORT).show();
-                            }
-                            name.setText("");
-                            price.setText("");
-
-                }
-            });
-
-                }}});
 
         spinner1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -187,8 +163,8 @@ public  static  final  int PICK_IMAGE=1021;
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if(requestCode==PICK_IMAGE && resultCode==RESULT_OK && data !=null){
-             imageuri =data.getData();
-            addimage.setImageURI(imageuri);
+             selectedimage =data.getData();
+            addimage.setImageURI(selectedimage);
 
         }}
 

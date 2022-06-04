@@ -6,6 +6,8 @@
     <string name="app_name3">عناصر</string>
     <string name="app_name4">ملابس</string>
     <string name="app_name5">اجهزة</string>
+    <string name="app_name41">رجالي</string>
+    <string name="app_name51">حريمي</string>
     <string name="app_name6">كتب</string>
     <string name="app_name7">ذكر</string>
     <string name="app_name8">انثى</string>
@@ -29,7 +31,7 @@
         <item>أنثى</item>
     </string-array>
     <string-array name="adddeviceadd">
-        <item>لابتوب </item>
+        <item>لابتوب</item>
         <item>ماوس</item>
         <item>كيبورد</item>
         <item>بلاستيشن</item>
@@ -63,12 +65,10 @@
     <string name="mouse">ماوس</string>
     <string name="keyboard">كيبورد</string>
     <string name="playstation">بلاستيشن</string>
-    <string name="fjacket">جاكيت</string>
-
-    <string name="fshoe">حذاء</string>
-    <string name="fdress">فستان</string>
-    <string name="fhat">طاقيه</string>
-
+    <string name="fjacket">.جاكيت</string>
+    <string name="fshoe">حذاء.</string>
+    <string name="fdress">.فستان</string>
+    <string name="fhat">طاقيه.</string>
     <string name="jacket">جاكيت</string>
     <string name="pric">السعر</string>
     <string name="morw">رجالي || حريمي</string>

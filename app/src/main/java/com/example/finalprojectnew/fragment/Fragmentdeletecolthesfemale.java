@@ -45,7 +45,8 @@ public class Fragmentdeletecolthesfemale extends Fragment {
                     for(DataSnapshot snap:data) {
                         Product p = snap.getValue(Product.class);
                         String name=p.getSex();
-                        if (name.equals("female")||name.equals("أنثى")){
+                        String female= getString(R.string.female);
+                        if (name.equals(female)){
                               data2.add(p);
                             }
                     }                    RecyclerView rv=view.findViewById(R.id.rec10);

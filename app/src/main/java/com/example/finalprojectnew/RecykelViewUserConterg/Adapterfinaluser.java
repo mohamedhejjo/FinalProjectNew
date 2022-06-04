@@ -44,8 +44,9 @@ public class Adapterfinaluser  extends RecyclerView.Adapter<HolderShowPrice> {
         holder.view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                    Intent intent=new Intent(context, Price.class);
-                    context.startActivity(intent);
+                Intent intent=new Intent(context, Price.class);
+                intent.putExtra("finalu",finalu);
+                context.startActivity(intent);
                 }
         });
     }

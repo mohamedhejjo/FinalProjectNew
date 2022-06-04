@@ -4,10 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.finalprojectnew.Class.Product;
+import com.example.finalprojectnew.Pricefinal;
 import com.example.finalprojectnew.R;
 import com.example.finalprojectnew.RecykelViewUserConterg.ClassShowPrice;
 
@@ -25,12 +28,19 @@ public class Price extends AppCompatActivity {
         Button btn=findViewById(R.id.price);
         ImageView image=findViewById(R.id.imageprice);
         Intent intent=getIntent();
-        ClassShowPrice csp=(ClassShowPrice)intent.getSerializableExtra("finalu");
+        Product csp=(Product)intent.getSerializableExtra("finalu");
         name.setText(csp.getName());
         price.setText(csp.getPrice());
-        pro.setText(csp.getPro());
-        image.setImageResource(csp.getImage());
-        female.setText(csp.getFemal());
+        pro.setText(csp.getProduct());
+//        image.setImageResource(csp.getImage());
+        female.setText(csp.getSex());
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+               Intent  intent1=new Intent(getApplicationContext(), Pricefinal.class);
+                startActivity(intent1);
+            }
+        });
 
     }
 }

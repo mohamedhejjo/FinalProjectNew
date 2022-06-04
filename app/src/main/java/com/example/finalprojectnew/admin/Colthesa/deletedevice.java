@@ -42,9 +42,8 @@ public class deletedevice extends AppCompatActivity {
 
                     }
                     RecyclerView rv=findViewById(R.id.rec11);
-                    AdapterUbdate ad=new AdapterUbdate(data2);
+                    Adapterdelete ad=new Adapterdelete(data2);
                     rv.setAdapter(ad);
-                    rv.hasFixedSize();
                     RecyclerView.LayoutManager lm=new LinearLayoutManager(getApplicationContext());
                     rv.setLayoutManager(lm);
                 }
