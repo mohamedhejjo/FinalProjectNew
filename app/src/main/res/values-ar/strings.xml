@@ -83,8 +83,8 @@
     <string name="GazaStore">متجر غزة</string>
     <string name="WelcomeToGaza">مرحبا بك في تطبيق متجر غزة , تصفحنا الان</string>
     <string name="Wearehappy">يسعدنا زيارتك لنا ، متجرنا هو بيع ملابس رجال و نساء</string>
-    .    <string name="Loginasuser"> الدخول كمستخدم</string>
-    .    <string name="Loginadmin"> الدخول كمسؤول</string>
+        <string name="Loginasuser"> الدخول كمستخدم</string>
+        <string name="Loginadmin"> الدخول كمسؤول</string>
 
 
 
