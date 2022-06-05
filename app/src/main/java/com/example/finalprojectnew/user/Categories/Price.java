@@ -9,7 +9,10 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.finalprojectnew.Class.Admin;
 import com.example.finalprojectnew.Class.Product;
+import com.example.finalprojectnew.Finish;
+import com.example.finalprojectnew.MainActivity;
 import com.example.finalprojectnew.Pricefinal;
 import com.example.finalprojectnew.R;
 import com.example.finalprojectnew.RecykelViewUserConterg.ClassShowPrice;
@@ -25,14 +28,15 @@ public class Price extends AppCompatActivity {
         TextView price=findViewById(R.id.priceprice);
         TextView pro=findViewById(R.id.pricepro);
         TextView female=findViewById(R.id.prfema);
-        Button btn=findViewById(R.id.price);
+        Button btn=findViewById(R.id.buy);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent  intent1=new Intent(getApplicationContext(), Pricefinal.class);
-                startActivity(intent1);
+                Intent i = new Intent(getBaseContext(), Finish.class);
+                startActivity(i);
             }
         });
+
         ImageView image=findViewById(R.id.imageprice);
         Intent intent=getIntent();
         Product csp=(Product)intent.getSerializableExtra("finalu");
@@ -41,6 +45,7 @@ public class Price extends AppCompatActivity {
         pro.setText(csp.getProduct());
 //        image.setImageResource(csp.getImage());
         female.setText(csp.getSex());
+
 
 
     }

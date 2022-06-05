@@ -127,14 +127,15 @@
                 android:textSize="20sp" />
         </LinearLayout>
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/price"
+        <Button
+            android:id="@+id/buy"
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:layout_margin="20dp"
             android:text="Buy"
             android:textColor="@color/black"
             app:backgroundTint="@color/color_bg_favorites"
+
             />
 
     </LinearLayout>
