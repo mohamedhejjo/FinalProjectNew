@@ -1,45 +1,152 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".MainActivity"
+android:foreground="@drawable/design_header2"
+android:background="@color/white"
+
+
+android:orientation="vertical">
+
+
+
+<ImageView
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="wrap_content"
+    android:src="@drawable/cover"
+    android:scaleType="fitXY"
+    />
+<TextView
+    android:foreground="@drawable/design_header3"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/GazaStore"
+    android:textSize="55dp"
+    android:fontFamily="@font/against_history"
+    android:gravity="center"
+    android:textColor="#9CB8EF"
+    android:layout_marginBottom="30dp"     />
 
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/viewpagerhome"
-        android:layout_width="409dp"
-        android:layout_height="681dp"
-        app:layout_constraintBottom_toTopOf="@+id/tabLayouthome"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fontFamily="@font/stronggirls_demo"
+    android:layout_marginBottom="50dp"
+    android:textSize="25dp"
+    android:gravity="center"
+    android:layout_marginTop="20dp"
+    android:textColor="#673AB7"
+    android:text="@string/WelcomeToGaza"
+    />
 
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tabLayouthome"
-        android:layout_width="409dp"
-        app:tabTextColor="@color/black"
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center"
+    >
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="150dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/wmale" />
+    <TextView
+        android:layout_width="145dp"
+        android:layout_height="150dp"
+        android:fontFamily="@font/against_history"
+        android:textSize="25dp"
+        android:gravity="center_horizontal"
+        android:scaleType="fitXY"
+        android:textColor="#673AB7"
+        android:text="@string/Wearehappy"
+        />
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="150dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/wfemale"
+        />
+
+
+</LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    >
+    <ImageView
+        android:layout_margin="20dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_baseline_person_24"
+        />
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:tabPadding="5dp"
-        app:tabRippleColor="#02E2FF"
-        app:tabIndicatorColor="#00ABF8"
-        app:tabSelectedTextColor="@color/red"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Monday" />
-
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Tuesday" />
+        android:text="@string/Loginasuser"
+        android:textSize="25dp"
+        android:textColor="#673AB7"
+        android:fontFamily="@font/playfairdisplay_bold"
+        android:layout_gravity="center"
+        />
 
 
-    </com.google.android.material.tabs.TabLayout>
+    <ImageButton
+        android:id="@+id/next"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:scaleType="fitXY"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="50dp"
+        android:backgroundTint="@color/white"
+        android:src="@drawable/next"
+        />
+</LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <ImageView
+        android:layout_margin="20dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_baseline_admin_panel_settings_24"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Loginadmin"
+        android:textSize="25dp"
+        android:textColor="#673AB7"
+        android:fontFamily="@font/playfairdisplay_bold"
+        android:layout_gravity="center"
+        />
+
+    <ImageButton
+        android:id="@+id/next2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:scaleType="fitXY"
+        android:layout_gravity="center_horizontal"
+        android:backgroundTint="@color/white"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="30dp"
+        android:src="@drawable/next"
+        />
+</LinearLayout>
+
+
+
+
+
+
+
+</LinearLayout>

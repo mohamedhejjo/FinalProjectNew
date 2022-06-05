@@ -10,9 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FinalProjectNew">
         <activity
-            android:name=".welcome"
-            android:exported="false" />
-        <activity
             android:name=".user.Categories.Price"
             android:exported="false"
             android:label="@string/price1"
