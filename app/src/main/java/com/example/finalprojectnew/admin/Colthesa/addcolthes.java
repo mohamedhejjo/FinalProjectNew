@@ -107,7 +107,7 @@ public  static  final  int PICK_IMAGE=1021;
                 selected1 = prent.getItemAtPosition(i).toString();
                 String male=getString(R.string.male);
                 String female=getString(R.string.female);
-                if (selected1.equals(male)) {
+                if (selected1.equals("male")||selected1.equals("ذكر")) {
                     ArrayList<String> male1 = new ArrayList<>();
                     String jacket=getString(R.string.jacket);
                     String shoe= getString(R.string.shoe);
@@ -119,7 +119,7 @@ public  static  final  int PICK_IMAGE=1021;
                     male1.add(hat);
                     ArrayAdapter<String> adaptermale = new ArrayAdapter<String>(prent.getContext(), android.R.layout.simple_spinner_dropdown_item, male1);
                     spinner2.setAdapter(adaptermale);
-                } else if (selected1.equals(female)) {
+                } else if (selected1.equals("female")||selected1.equals("أنثى")) {
                     ArrayList<String> female1 = new ArrayList<>();
                     String fjacket=getString(R.string.fjacket);
                     String fshoe= getString(R.string.fshoe);

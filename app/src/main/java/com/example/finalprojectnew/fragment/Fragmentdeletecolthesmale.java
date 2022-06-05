@@ -45,7 +45,7 @@ public class Fragmentdeletecolthesmale extends Fragment {
                         Product p = snap.getValue(Product.class);
 
                         String male= getString(R.string.male);
-                       if (p.getSex().equals(male)){
+                        if (p.getSex().equals("male")||p.getSex().equals("ذكر")){
                                 data2.add(p);
                             }
                     }
