@@ -9,13 +9,9 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.finalprojectnew.Class.Admin;
 import com.example.finalprojectnew.Class.Product;
 import com.example.finalprojectnew.Finish;
-import com.example.finalprojectnew.MainActivity;
-import com.example.finalprojectnew.Pricefinal;
 import com.example.finalprojectnew.R;
-import com.example.finalprojectnew.RecykelViewUserConterg.ClassShowPrice;
 
 public class Price extends AppCompatActivity {
 
