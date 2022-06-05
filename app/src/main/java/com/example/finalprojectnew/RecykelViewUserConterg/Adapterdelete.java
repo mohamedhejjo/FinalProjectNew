@@ -45,9 +45,9 @@ public class Adapterdelete extends RecyclerView.Adapter<Holderdelete> {
         holder.view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String female= context.getString(R.string.female);
-                String male= context.getString(R.string.male);
-                if (csp.getSex().equals(female)||csp.getSex().equals(male)
+
+                if (csp.getSex().equals("female")||csp.getSex().equals("male")||
+                        csp.getSex().equals("أنثى")||csp.getSex().equals("ذكر")
                 ){
                     Intent intent=new Intent(context, deletefinal.class);
                     intent.putExtra("productdelete",  csp);

@@ -50,8 +50,10 @@ String name=csp.getProduct();
                 String female= context.getString(R.string.female);
                 String male= context.getString(R.string.male);
 
-                if (csp.getSex().equals(female)||csp.getSex().equals(male)
-                    ) {
+                if (csp.getSex().equals("female")||csp.getSex().equals("male")||
+                        csp.getSex().equals("أنثى")||csp.getSex().equals("ذكر")
+
+                ) {
                     Intent intent = new Intent(context, Updateprofinalcolthes.class);
                     intent.putExtra("productupdate", csp);
                     context.startActivity(intent);

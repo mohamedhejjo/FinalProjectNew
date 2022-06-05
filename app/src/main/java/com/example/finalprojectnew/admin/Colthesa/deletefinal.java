@@ -21,13 +21,12 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class deletefinal extends AppCompatActivity {
-    private String id;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.deletefinal);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        View view;
         Intent intent=getIntent();
         Product csp=(Product)intent.getSerializableExtra("productdelete");
         ImageView imag=findViewById(R.id.imageuserdelete);
@@ -38,7 +37,7 @@ public class deletefinal extends AppCompatActivity {
         Name.setText(csp.getName());
         price.setText(""+csp.getPrice()+"$");
         pro.setText(csp.getProduct());
-         id=csp.getId();
+
 
     }
     @Override
@@ -51,14 +50,17 @@ public class deletefinal extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id=item.getItemId();
         if(id==R.id.delete) {
+            Intent intent=getIntent();
+            Product csp=(Product)intent.getSerializableExtra("productdelete");
+            String  id1=csp.getId();
             FirebaseDatabase db=FirebaseDatabase.getInstance();
             DatabaseReference dr = db.getReference("addcolthes");
-            dr.child(String.valueOf(id));
-            dr.removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
+
+            dr.child(id1).removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
                 @Override
                 public void onComplete(@NonNull Task<Void> task) {
                     if (task.isSuccessful()){
-                        Intent intent = new Intent(getApplicationContext(), adminCategories.class);
+                        Intent intent = new Intent(getApplicationContext(), deletecolthes.class);
                         startActivity(intent);
                         Toast.makeText(getApplicationContext(), "delete", Toast.LENGTH_SHORT).show();
                     }else{

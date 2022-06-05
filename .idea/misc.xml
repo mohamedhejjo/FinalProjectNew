@@ -3,7 +3,6 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/al/AndroidStudioProjects/FinalProjectNew4/app/src/main/res/layout/activity_welcome.xml" value="0.25" />
         <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2203125" />
         <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/drawable/baseline.xml" value="0.11197916666666667" />
         <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/drawable/btnadmin.xml" value="0.11197916666666667" />
@@ -31,6 +30,7 @@
         <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/delete.xml" value="0.1" />
         <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/deletecolthes.xml" value="0.1" />
         <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/deletefinal.xml" value="0.1" />
+        <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/deletefinalfemale.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/deleteitem.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/devices.xml" value="0.1" />
         <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/fragmentadmin_create.xml" value="0.1" />
