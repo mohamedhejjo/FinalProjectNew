@@ -1,18 +1,24 @@
 package com.example.finalprojectnew.Class;
 
-import android.net.Uri;
-
-import com.google.firebase.database.DataSnapshot;
-
 import java.io.Serializable;
 
-public class Product implements Serializable {
+public class Productdevice implements Serializable {
     private String id;
     private String name;
     private String price;
-    private String sex;
     private String image;
     private String product;
+
+    public Productdevice() {
+    }
+
+    public Productdevice(String id, String name, String price, String image, String product) {
+        this.id = id;
+        this.name = name;
+        this.price = price;
+        this.image = image;
+        this.product = product;
+    }
 
     public String getId() {
         return id;
@@ -20,21 +26,6 @@ public class Product implements Serializable {
 
     public void setId(String id) {
         this.id = id;
-    }
-
-    public Product(String id, String name, String price, String sex, String image, String product) {
-        this.name = name;
-        this.id = id;
-        this.price = price;
-        this.sex = sex;
-        this.image = image;
-        this.product = product;
-    }
-public Product(){
-
-}
-    public Product(String name,String price,String sex,String image,String product) {
-        this.product = product;
     }
 
     public String getName() {
@@ -53,19 +44,11 @@ public Product(){
         this.price = price;
     }
 
-    public String getSex() {
-        return sex;
-    }
-
-    public void setSex(String sex) {
-        this.sex = sex;
-    }
-
     public String getImage() {
         return image;
     }
 
-    public void setImage( String image) {
+    public void setImage(String image) {
         this.image = image;
     }
 

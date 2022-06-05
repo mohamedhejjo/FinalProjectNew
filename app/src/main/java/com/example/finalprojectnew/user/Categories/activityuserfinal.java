@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.widget.Toast;
 
 import com.example.finalprojectnew.Class.Product;
+import com.example.finalprojectnew.Class.Productdevice;
 import com.example.finalprojectnew.R;
 import com.example.finalprojectnew.RecykelViewUserConterg.Adapterfinaluser;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -22,6 +23,8 @@ import java.util.ArrayList;
 
 public class activityuserfinal extends AppCompatActivity {
    public ArrayList<Product> data2=new ArrayList<Product>();
+    public ArrayList<Productdevice> data22=new ArrayList<Productdevice>();
+
     FirebaseDatabase db=FirebaseDatabase.getInstance();
 
     @Override
@@ -105,15 +108,15 @@ for(DataSnapshot snap:data){
                 if (task.isSuccessful()){
                     Iterable<DataSnapshot>data3=task.getResult().getChildren();
                 for(DataSnapshot snap:data3) {
-                    Product p = snap.getValue(Product.class);
+                    Productdevice p = snap.getValue(Productdevice.class);
                  if(name.equals(laptop)){   if (p.getProduct().equals("laptop")||p.getProduct().equals("لابتوب")){
-                        data2.add(p);}setTitle(laptop);
+                     data22.add(p);}setTitle(laptop);
                     }if(name.equals(mouse)){ if(p.getProduct().equals("mouse")||p.getProduct().equals("ماوس")){
-                        data2.add(p);}setTitle(mouse);
+                        data22.add(p);}setTitle(mouse);
                     }if(name.equals(keyboard)){ if(p.getProduct().equals("keyboard")||p.getProduct().equals("كيبورد")){
-                        data2.add(p);}setTitle(keyboard);
+                        data22.add(p);}setTitle(keyboard);
                     }if(name.equals(playstation)){ if(p.getProduct().equals("playstation")||p.getProduct().equals("بلاستيشن")){
-                        data2.add(p);}setTitle(playstation);
+                        data22.add(p);}setTitle(playstation);
                     }
                 } RecyclerView rv=findViewById(R.id.recy1);
                     Adapterfinaluser ad=new Adapterfinaluser(data2);

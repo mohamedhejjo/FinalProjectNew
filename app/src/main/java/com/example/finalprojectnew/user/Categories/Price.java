@@ -26,6 +26,13 @@ public class Price extends AppCompatActivity {
         TextView pro=findViewById(R.id.pricepro);
         TextView female=findViewById(R.id.prfema);
         Button btn=findViewById(R.id.price);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent  intent1=new Intent(getApplicationContext(), Pricefinal.class);
+                startActivity(intent1);
+            }
+        });
         ImageView image=findViewById(R.id.imageprice);
         Intent intent=getIntent();
         Product csp=(Product)intent.getSerializableExtra("finalu");
@@ -34,13 +41,7 @@ public class Price extends AppCompatActivity {
         pro.setText(csp.getProduct());
 //        image.setImageResource(csp.getImage());
         female.setText(csp.getSex());
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-               Intent  intent1=new Intent(getApplicationContext(), Pricefinal.class);
-                startActivity(intent1);
-            }
-        });
+
 
     }
 }

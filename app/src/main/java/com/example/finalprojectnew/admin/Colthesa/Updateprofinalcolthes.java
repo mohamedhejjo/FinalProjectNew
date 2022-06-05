@@ -1,5 +1,6 @@
 package com.example.finalprojectnew.admin.Colthesa;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,13 +16,22 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.finalprojectnew.Class.Product;
 import com.example.finalprojectnew.R;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
 
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.UUID;
 
 public class Updateprofinalcolthes extends AppCompatActivity {
     Spinner spinner1;
@@ -31,7 +41,8 @@ public class Updateprofinalcolthes extends AppCompatActivity {
     String selected1;
     String selected2;
     private ImageView addimage;
-    static byte[] imageContent;
+    Uri selectedimage;
+    public  static  final  int PICK_IMAGE=1021;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,6 +60,7 @@ public class Updateprofinalcolthes extends AppCompatActivity {
 //        addimage.setImageURI(equals(csp.getImage()));
         name.setText(csp.getName());
         price.setText(""+csp.getPrice()+"$");
+       String id= csp.getId();
         update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -58,7 +70,75 @@ public class Updateprofinalcolthes extends AppCompatActivity {
                     name.setError("name not be empty");  }
                 else if (price1.isEmpty()){
                     price.setError("price not be empty");  }
-                else{}
+                else {
+                    if (selectedimage != null) {
+                        FirebaseStorage storage=FirebaseStorage.getInstance();
+                        StorageReference ref=storage.getReference("images/"+ UUID.randomUUID().toString());
+                        ref.putFile(selectedimage).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
+                            @Override
+                            public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
+                                if (task.isSuccessful()){
+                                    ref.getDownloadUrl().addOnCompleteListener(new OnCompleteListener<Uri>() {
+                                        @Override
+                                        public void onComplete(@NonNull Task<Uri> task) {
+                                            if (task.isSuccessful())  {
+                                                String image=task.getResult().toString();
+                                                FirebaseDatabase db= FirebaseDatabase.getInstance();
+                                                DatabaseReference dr=db.getReference("addcolthes");
+                                                Product product=new Product();
+                                                product.setName(name1);
+                                                product.setProduct(selected2);
+                                                product.setPrice(price1);
+                                                product.setSex(selected1);
+                                                product.setImage(image);
+                                                product.setId(id);
+                                                dr.child(id).setValue(product).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                                    @Override
+                                                    public void onComplete(@NonNull Task<Void> task) {
+                                                        if (task.isSuccessful()){
+                                                            Toast.makeText(getApplicationContext(), "Success image", Toast.LENGTH_SHORT).show();
+
+                                                        }else{
+                                                            Toast.makeText(getApplicationContext(), "Failed", Toast.LENGTH_SHORT).show();
+                                                        }
+                                                        name.setText("");
+                                                        price.setText("");
+                                                    }
+                                                });
+                                            }
+                                        }
+                                    });
+                                }else{
+                                    Toast.makeText(getApplicationContext(), "Uplooad image failed", Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        });
+
+                    }else{
+                        FirebaseDatabase db= FirebaseDatabase.getInstance();
+                        DatabaseReference dr=db.getReference("addcolthes");
+                        Product product=new Product();
+                        product.setName(name1);
+                        product.setProduct(selected2);
+                        product.setPrice(price1);
+                        product.setSex(selected1);
+                        product.setImage("image");
+                        product.setId(id);
+                        dr.child(id).setValue(product).addOnCompleteListener(new OnCompleteListener<Void>() {
+                            @Override
+                            public void onComplete(@NonNull Task<Void> task) {
+                                if (task.isSuccessful()){
+                                    Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_SHORT).show();
+
+                                }else{
+                                    Toast.makeText(getApplicationContext(), "Failed", Toast.LENGTH_SHORT).show();
+                                }
+                                name.setText("");
+                                price.setText("");
+
+                            }
+                        });}
+                }
             }
 
         });
@@ -119,26 +199,15 @@ public class Updateprofinalcolthes extends AppCompatActivity {
     public void Mohamed(View view) {
         Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
         intent.setType("image/*");
-        startActivityForResult(intent,100);
+        startActivityForResult(intent,PICK_IMAGE);
 
     }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if(requestCode==100 && resultCode==RESULT_OK){
-            Uri imageuri =data.getData();
-            try {
-                InputStream inputStream=getContentResolver().openInputStream(imageuri);
-                Bitmap descorStream = BitmapFactory.decodeStream(inputStream);
-                addimage.setImageBitmap(descorStream);
-                imageContent=getBytes(descorStream);
-            }catch (Exception ex){
-                ex.printStackTrace();
-            }
+        if (requestCode == PICK_IMAGE && resultCode == RESULT_OK && data != null) {
+            selectedimage = data.getData();
+            addimage.setImageURI(selectedimage);
 
-        }}
-    private byte[] getBytes(Bitmap descorStream) {
-        ByteArrayOutputStream stream=new ByteArrayOutputStream();
-        descorStream.compress(Bitmap.CompressFormat.PNG,0,stream);
-        return stream.toByteArray();
+        }
     }}

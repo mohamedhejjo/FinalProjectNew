@@ -55,7 +55,8 @@ public  static  final  int PICK_IMAGE=1021;
                                            name.setError("name not be empty");
                                        } else if (price1.isEmpty()) {
                                            price.setError("price not be empty");
-                                       } else {
+                                       }
+                                       else {
                                            if (selectedimage != null) {
                                                FirebaseDatabase db = FirebaseDatabase.getInstance();
                                                DatabaseReference dr = db.getReference("addcolthes");

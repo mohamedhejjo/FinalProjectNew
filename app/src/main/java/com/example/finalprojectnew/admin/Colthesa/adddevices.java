@@ -18,6 +18,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.finalprojectnew.Class.Product;
+import com.example.finalprojectnew.Class.Productdevice;
 import com.example.finalprojectnew.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -61,7 +62,7 @@ public class adddevices extends AppCompatActivity {
                     name.setError("name not be empty");
                 } else if (price1.isEmpty()) {
                     price.setError("price not be empty");
-                }  else if(imageuri !=null){
+                    }  else if(imageuri !=null){
                     FirebaseStorage storage=FirebaseStorage.getInstance();
                     StorageReference ref=storage.getReference("images/"+ UUID.randomUUID().toString());
                     ref.putFile(imageuri).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
@@ -76,7 +77,7 @@ public class adddevices extends AppCompatActivity {
                                             FirebaseDatabase db= FirebaseDatabase.getInstance();
                                             DatabaseReference dr=db.getReference("adddevice");
                                             String id=dr.push().getKey();
-                                            Product product=new Product(id,name1,price1,image,selected);
+                                            Productdevice product=new Productdevice(id,name1,price1,image,selected);
                                             dr.child(id).setValue(product).addOnCompleteListener(new OnCompleteListener<Void>() {
                                                 @Override
                                                 public void onComplete(@NonNull Task<Void> task) {
@@ -103,7 +104,7 @@ public class adddevices extends AppCompatActivity {
                     FirebaseDatabase db= FirebaseDatabase.getInstance();
                     DatabaseReference dr=db.getReference("adddevice");
                     String id=dr.push().getKey();
-                    Product product=new Product(id,name1,price1,"image",selected);
+                    Productdevice product=new Productdevice(id,name1,price1,"image",selected);
                     dr.child(id).setValue(product).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
@@ -118,7 +119,10 @@ public class adddevices extends AppCompatActivity {
                         }
                     });
 
-                    spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+
+
+                }}});
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 selected = adapterView.getItemAtPosition(i).toString();
@@ -129,9 +133,7 @@ public class adddevices extends AppCompatActivity {
             public void onNothingSelected(AdapterView<?> adapterView) {
 
             }
-        });
-
-                }}});}
+        });}
 
     public void Mohamed(View view) {
         Intent intent = new Intent(Intent.ACTION_GET_CONTENT);

@@ -37,6 +37,7 @@ public class Updateprofinaldevice extends AppCompatActivity {
             name = findViewById(R.id.ufina1);
             price = findViewById(R.id.ufina2);
             update = findViewById(R.id.Updatecreatedivaec);
+             spinner= findViewById(R.id.spinner4);
             Intent intent=getIntent();
             Product csp=(Product)intent.getSerializableExtra("productupdate");
 
