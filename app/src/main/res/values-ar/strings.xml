@@ -87,7 +87,8 @@
         <string name="Loginadmin"> الدخول كمسؤول</string>
 
 
-
+    <string name="Payer">دفع</string>
+    <string name="nomducompte">رقم الحساب</string>
 
 
 </resources>

@@ -57,12 +57,8 @@ public class AdapterCotr extends RecyclerView.Adapter<HolderCotr> {
                 String hat= context.getString(R.string.hat);
                 String clothes= context.getString(R.string.app_name4);
                 String devices= context.getString(R.string.app_name5);
-             if(holder.textView.getText().equals(clothes)) {
-                Intent intent=new Intent(context, com.example.finalprojectnew.user.Categories.clothes.class);
-                 intent.putExtra("finaluser",name);
-                 context.startActivity(intent);           }
 
-            else if(holder.textView.getText().equals(male)) {
+             if(holder.textView.getText().equals(male)) {
                 Intent intent=new Intent(context, usermale.class);
                  intent.putExtra("finaluser",name);
                  context.startActivity(intent);           }

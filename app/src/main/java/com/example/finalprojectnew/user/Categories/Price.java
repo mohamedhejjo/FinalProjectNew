@@ -22,6 +22,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class Price extends AppCompatActivity {
 String id;
+    Product csp;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,22 +46,13 @@ String id;
             @Override
             public void onClick(View view) {
 
-                Intent i = new Intent(getBaseContext(), Finish.class);
+                Intent i = new Intent(getBaseContext(), Pricefinal.class);
+                i.putExtra("price",csp.getPrice());
+                i.putExtra("product",csp.getProduct());
+                i.putExtra("name",csp.getName());
+                i.putExtra("id",csp.getId());
                 startActivity(i);
-                FirebaseDatabase db=FirebaseDatabase.getInstance();
-                DatabaseReference dr = db.getReference("addcolthes");
-                dr.child(id).removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        if (task.isSuccessful()){
 
-                            Toast.makeText(getApplicationContext(), "sold", Toast.LENGTH_SHORT).show();
-                        }else{
-                            Toast.makeText(getApplicationContext(), "not sold", Toast.LENGTH_SHORT).show();
-                        }
-
-                    }
-                });
             }
         });
 
