@@ -2,7 +2,6 @@ package com.example.finalprojectnew.admin.Categories;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,9 +10,7 @@ import android.view.MenuItem;
 
 import com.example.finalprojectnew.R;
 import com.example.finalprojectnew.admin.Colthesa.addcolthes;
-import com.example.finalprojectnew.admin.Colthesa.adddevices;
 import com.example.finalprojectnew.admin.adminCategories;
-import com.google.android.material.tabs.TabLayout;
 
 public class add extends AppCompatActivity {
 
@@ -42,10 +39,7 @@ public class add extends AppCompatActivity {
             Intent intent=new Intent(getApplicationContext(), addcolthes.class);
             startActivity(intent);
         }
-        else if(id==R.id.adddevices){
-            Intent intent=new Intent(getApplicationContext(), adddevices.class);
-            startActivity(intent);
-        }
+
         return super.onOptionsItemSelected(item);
     }
 }

@@ -11,8 +11,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.finalprojectnew.R;
 import com.example.finalprojectnew.user.Categories.activityuserfinal;
-import com.example.finalprojectnew.user.Categories.clothes;
-import com.example.finalprojectnew.user.Categories.devices;
 import com.example.finalprojectnew.user.Clothes.userfemale;
 import com.example.finalprojectnew.user.Clothes.usermale;
 
@@ -63,10 +61,7 @@ public class AdapterCotr extends RecyclerView.Adapter<HolderCotr> {
                 Intent intent=new Intent(context, com.example.finalprojectnew.user.Categories.clothes.class);
                  intent.putExtra("finaluser",name);
                  context.startActivity(intent);           }
-            else if(holder.textView.getText().equals(devices)) {
-                Intent intent=new Intent(context, com.example.finalprojectnew.user.Categories.devices.class);
-                 intent.putExtra("finaluser",name);
-                 context.startActivity(intent);           }
+
             else if(holder.textView.getText().equals(male)) {
                 Intent intent=new Intent(context, usermale.class);
                  intent.putExtra("finaluser",name);

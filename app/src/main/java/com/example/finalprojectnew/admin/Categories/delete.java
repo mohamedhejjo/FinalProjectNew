@@ -9,7 +9,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.example.finalprojectnew.R;
-import com.example.finalprojectnew.admin.Colthesa.deletedevice;
 import com.example.finalprojectnew.admin.Colthesa.deletecolthes;
 import com.example.finalprojectnew.admin.adminCategories;
 
@@ -38,10 +37,7 @@ public class delete extends AppCompatActivity {
             Intent intent=new Intent(getApplicationContext(), deletecolthes.class);
             startActivity(intent);
         }
-        else if(id==R.id.deletedevices){
-            Intent intent=new Intent(getApplicationContext(), deletedevice.class);
-            startActivity(intent);
-        }
+
         return super.onOptionsItemSelected(item);
     }
 

@@ -13,7 +13,6 @@ import com.bumptech.glide.Glide;
 import com.example.finalprojectnew.Class.Product;
 import com.example.finalprojectnew.R;
 import com.example.finalprojectnew.admin.Colthesa.Updateprofinalcolthes;
-import com.example.finalprojectnew.admin.Colthesa.Updateprofinaldevice;
 
 import java.util.ArrayList;
 
@@ -57,12 +56,7 @@ String name=csp.getProduct();
                     Intent intent = new Intent(context, Updateprofinalcolthes.class);
                     intent.putExtra("productupdate", csp);
                     context.startActivity(intent);
-                } else if(!(csp.getSex().equals(female)||csp.getSex().equals(male)
-                        )){
-                    Intent intent = new Intent(context, Updateprofinaldevice.class);
-                    intent.putExtra("productupdate", csp);
-                    context.startActivity(intent);
-                    }
+                }
                 }
         });
     }
