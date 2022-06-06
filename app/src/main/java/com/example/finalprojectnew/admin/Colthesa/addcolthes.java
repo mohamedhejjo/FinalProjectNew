@@ -2,10 +2,18 @@ package com.example.finalprojectnew.admin.Colthesa;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 
+import android.app.Notification;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -24,6 +32,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class addcolthes extends AppCompatActivity {
     Spinner spinner1;
@@ -47,10 +56,42 @@ public  static  final  int PICK_IMAGE=1021;
         price=findViewById(R.id.acol2);
         add=findViewById(R.id.addcreate);
         add.setOnClickListener(new View.OnClickListener() {
+                                   @RequiresApi(api = Build.VERSION_CODES.M)
                                    @Override
                                    public void onClick(View view) {
+
+
+
+                                       //create pending intent to open activity outside notification app
+                                       //it will allow users to go directly from the notification to an activity of  app
+                                       Intent notificationIntent = new Intent(getApplicationContext(), addcolthes.class);
+                                       PendingIntent pendingIntent = PendingIntent.getActivity(getApplicationContext(), 0, notificationIntent, 0);
+
+                                       //Build the Notification
+                                       NotificationManager nm = getSystemService(NotificationManager.class);
+
+                                       if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
+                                           NotificationChannel nc = new NotificationChannel("my_id", "added product" , NotificationManager.IMPORTANCE_HIGH);
+                                           nm.createNotificationChannel(nc);
+                                       }
+                                       NotificationCompat.Builder builder = new NotificationCompat.Builder(addcolthes.this,"my_id");
+
                                        String name1 = name.getText().toString();
                                        String price1 = price.getText().toString();
+                                       if (name1.isEmpty()) {
+                                           name.setError("name not be empty");
+                                       } else if (price1.isEmpty()) {
+                                           price.setError("price not be empty");
+                                       }else {
+                                           builder.setContentTitle(name.getText().toString());
+                                           builder.setContentText(price.getText().toString());
+                                           builder.setSmallIcon(R.drawable.ic_baseline_send_24);
+
+                                           nm.notify(new Random().nextInt(), builder.build());
+                                       }
+
+                                       String name2 = name.getText().toString();
+                                       String price2 = price.getText().toString();
                                        if (name1.isEmpty()) {
                                            name.setError("name not be empty");
                                        } else if (price1.isEmpty()) {
@@ -96,9 +137,11 @@ public  static  final  int PICK_IMAGE=1021;
                                                        }
                                                    });}
                                            }
+
                                        }
 
-                               });
+
+        });
 
 
         spinner1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -167,7 +210,15 @@ public  static  final  int PICK_IMAGE=1021;
              selectedimage =data.getData();
             addimage.setImageURI(selectedimage);
 
-        }}
+
+
+        }
+    }
+
+
+
+
+
 
 
 }
