@@ -88,8 +88,8 @@ public  static  final  int PICK_IMAGE=1021;
                                            price.setError("price not be empty");
                                        }
                                       else {
-                                          builder.setContentTitle(name.getText().toString());
-                                          builder.setContentText(price.getText().toString());
+                                          builder.setContentTitle("Product added:\n"+name.getText().toString());
+                                          builder.setContentText("price:"+price.getText().toString());
                                           builder.setSmallIcon(R.drawable.ic_baseline_send_24);
 
                                           Intent i = new Intent(addcolthes.this, MainActivity.class);
@@ -100,6 +100,11 @@ public  static  final  int PICK_IMAGE=1021;
 
                                           nm.notify(new Random().nextInt(), builder.build());
                                       }
+
+
+
+
+
 
                                        String name2 = name.getText().toString();
                                        String price2 = price.getText().toString();
