@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FinalProjectNew">
         <activity
+            android:name=".admin.Categories.Sales"
+            android:exported="false" />
+        <activity
             android:name=".user.Categories.Pricefinal"
             android:exported="false" />
         <activity
