@@ -26,7 +26,7 @@ public class Adaptersales extends RecyclerView.Adapter<holdersales> {
     @Override
     public holdersales onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         context=parent.getContext();
-        View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.itemshowprice,parent,false);
+        View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.salesitem,parent,false);
         return new holdersales(view);    }
 
     @Override
