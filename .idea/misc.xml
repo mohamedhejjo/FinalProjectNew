@@ -3,6 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/al/AndroidStudioProjects/FinalProjectNew110/app/src/main/res/drawable/design_header.xml" value="0.1525" />
+        <entry key="..\:/Users/al/AndroidStudioProjects/FinalProjectNew110/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/al/AndroidStudioProjects/FinalProjectNew110/app/src/main/res/layout/admin_categories.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/al/AndroidStudioProjects/FinalProjectNew110/app/src/main/res/layout/clothes.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/al/AndroidStudioProjects/FinalProjectNew110/app/src/main/res/layout/fragmentuserlogin.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/al/AndroidStudioProjects/FinalProjectNew110/app/src/main/res/layout/itemde.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/al/AndroidStudioProjects/FinalProjectNew110/app/src/main/res/layout/itemshowprice.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/al/AndroidStudioProjects/FinalProjectNew110/app/src/main/res/layout/price.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/al/AndroidStudioProjects/FinalProjectNew110/app/src/main/res/layout/pricefinal.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/al/AndroidStudioProjects/FinalProjectNew110/app/src/main/res/layout/salesitem.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/al/AndroidStudioProjects/FinalProjectNew110/app/src/main/res/layout/user.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/al/AndroidStudioProjects/FinalProjectNew110/app/src/main/res/layout/user_categories.xml" value="0.25" />
+        <entry key="..\:/Users/al/AndroidStudioProjects/FinalProjectNew110/app/src/main/res/layout/usermale.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2203125" />
         <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/drawable/baseline.xml" value="0.11197916666666667" />
         <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/drawable/btnadmin.xml" value="0.11197916666666667" />
