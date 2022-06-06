@@ -39,7 +39,7 @@ public class Pricefinal extends AppCompatActivity {
         Intent intent=getIntent();
         String id=intent.getStringExtra("id");
 String price=intent.getStringExtra("price");
-String Product=intent.getStringExtra("Product");
+String Product=intent.getStringExtra("product");
 price1.setText(price);
 Product1.setText(Product);
         btn.setOnClickListener(new View.OnClickListener() {

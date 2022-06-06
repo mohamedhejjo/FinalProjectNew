@@ -13,8 +13,5 @@
         android:title="addColthes"
         ></item>
 
-    <item
-        android:id="@+id/adddevices"
-        android:title="addDevices"
-        ></item>
+
 </menu>

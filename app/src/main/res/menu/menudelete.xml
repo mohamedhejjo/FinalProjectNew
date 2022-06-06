@@ -13,8 +13,5 @@
         android:title="deleteColthes"
         ></item>
 
-    <item
-        android:id="@+id/deletedevices"
-        android:title="deleteDevices"
-        ></item>
+
 </menu>

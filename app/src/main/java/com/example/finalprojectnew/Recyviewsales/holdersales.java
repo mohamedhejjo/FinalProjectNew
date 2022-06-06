@@ -18,7 +18,7 @@ public class holdersales extends RecyclerView.ViewHolder {
     public holdersales(@NonNull View itemView) {
         super(itemView);
         view=itemView;
-        name=itemView.findViewById(R.id.textviewe);
+        name=itemView.findViewById(R.id.textView);
         price=itemView.findViewById(R.id.textView2);
         imageView=itemView.findViewById(R.id.imageView2);
     }}

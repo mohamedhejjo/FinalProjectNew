@@ -22,7 +22,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.ArrayList;
 
 public class Sales extends AppCompatActivity {
-    public ArrayList<PriceClas> data1=new ArrayList<PriceClas>();
+     ArrayList<PriceClas> data1=new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
