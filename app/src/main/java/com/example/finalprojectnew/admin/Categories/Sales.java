@@ -42,12 +42,13 @@ public class Sales extends AppCompatActivity {
                     for(DataSnapshot snap:data) {
                         PriceClas p = snap.getValue(PriceClas.class);
                         data1.add(p);
-                        RecyclerView rv=findViewById(R.id.rec20);
-                        Adaptersales ad=new Adaptersales(data1);
+
+                }
+                    RecyclerView rv=findViewById(R.id.rec20);
+                    Adaptersales ad=new Adaptersales(data1);
                     rv.setAdapter(ad);
                     RecyclerView.LayoutManager lm=new LinearLayoutManager(getApplicationContext());
-                    rv.setLayoutManager(lm);
-                }}
+                    rv.setLayoutManager(lm);}
                 else{
                     String error=task.getException().getMessage();
                     Toast.makeText(getBaseContext(), error, Toast.LENGTH_SHORT).show();

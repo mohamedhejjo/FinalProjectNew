@@ -35,9 +35,9 @@ public class Fragmentadminlogin extends Fragment {
                              Bundle savedInstanceState) {
         View view= inflater.inflate(R.layout.fragmentadminlogin, container, false);
         Button btnlogin=view.findViewById(R.id.adminlogin);
+
         email=view.findViewById(R.id.eadmin1);
         password=view.findViewById(R.id.eadmin2);
-
         btnlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -26,15 +26,15 @@ public class adminCategories extends AppCompatActivity {
 
         add.setOnClickListener(v -> {
             Intent intent=new Intent(getApplicationContext(), com.example.finalprojectnew.admin.Categories.add.class);
-            startActivity(intent);finish();
+            startActivity(intent);
         });
         delete.setOnClickListener(v -> {
             Intent intent=new Intent(getApplicationContext(), com.example.finalprojectnew.admin.Categories.delete.class);
-            startActivity(intent);finish();
+            startActivity(intent);
         });
         update.setOnClickListener(v -> {
             Intent intent=new Intent(getApplicationContext(), com.example.finalprojectnew.admin.Categories.update.class);
-            startActivity(intent);finish();
+            startActivity(intent);
         });
 
     }
@@ -49,7 +49,7 @@ public class adminCategories extends AppCompatActivity {
         int id=item.getItemId();
         if(id==R.id.sales) {
             Intent intent = new Intent(getApplicationContext(), Sales.class);
-            startActivity(intent);finish();
+            startActivity(intent);
 
         }
 

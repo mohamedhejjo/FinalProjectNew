@@ -30,14 +30,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getBaseContext(), user.class);
-                startActivity(intent);finish();
+                startActivity(intent);
             }
         });
         next2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(getBaseContext(), admin.class);
-                startActivity(intent);finish();
+                startActivity(intent);
             }
         });
 

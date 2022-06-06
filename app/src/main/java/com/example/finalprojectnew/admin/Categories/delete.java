@@ -31,11 +31,11 @@ public class delete extends AppCompatActivity {
         int id=item.getItemId();
         if(id==R.id.homedelete){
             Intent intent=new Intent(getApplicationContext(), adminCategories.class);
-            startActivity(intent);finish();
+            startActivity(intent);
 
         }else if(id==R.id.deletecoltes){
             Intent intent=new Intent(getApplicationContext(), deletecolthes.class);
-            startActivity(intent);finish();
+            startActivity(intent);
         }
 
         return super.onOptionsItemSelected(item);

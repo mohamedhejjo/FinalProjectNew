@@ -28,7 +28,7 @@ public class userCategories extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent =new Intent(getBaseContext(), clothes.class);
-                startActivity(intent);finish();
+                startActivity(intent);
             }
         });
 

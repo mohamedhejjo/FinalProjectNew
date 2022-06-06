@@ -38,7 +38,7 @@ finish();
         }else if(id==R.id.addcoltes){
             Intent intent=new Intent(getApplicationContext(), addcolthes.class);
             startActivity(intent);
-            finish();
+
         }
 
         return super.onOptionsItemSelected(item);

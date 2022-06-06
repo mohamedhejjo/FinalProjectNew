@@ -25,7 +25,6 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class Fragmentuserlogin extends Fragment {
     EditText email,password;
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -34,6 +33,7 @@ public class Fragmentuserlogin extends Fragment {
         Button btnuser=view.findViewById(R.id.userlogin);
         email=view.findViewById(R.id.edt1);
         password=view.findViewById(R.id.edt2);
+
         btnuser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

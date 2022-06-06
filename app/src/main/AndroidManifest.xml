@@ -18,7 +18,7 @@
             android:name=".user.Categories.Pricefinal"
             android:label="@string/pricefinal"
             android:exported="false"
-            android:parentActivityName=".user.Categories.Price"
+            android:parentActivityName=".user.Categories.clothes"
             />
         <activity
             android:name=".admin.Categories.Updatecolthes"
