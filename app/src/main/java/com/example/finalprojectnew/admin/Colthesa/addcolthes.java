@@ -56,7 +56,8 @@ public  static  final  int PICK_IMAGE=1021;
         price=findViewById(R.id.acol2);
         add=findViewById(R.id.addcreate);
         add.setOnClickListener(new View.OnClickListener() {
-//                                   @RequiresApi(api = Build.VERSION_CODES.M)
+
+                                   @RequiresApi(api = Build.VERSION_CODES.M)
                                    @Override
                                    public void onClick(View view) {
 
@@ -64,17 +65,16 @@ public  static  final  int PICK_IMAGE=1021;
 
                                        //create pending intent to open activity outside notification app
                                        //it will allow users to go directly from the notification to an activity of  app
-//                                       Intent notificationIntent = new Intent(getApplicationContext(), addcolthes.class);
-//                                       PendingIntent pendingIntent = PendingIntent.getActivity(getApplicationContext(), 0, notificationIntent, 0);
-//
-//                                       //Build the Notification
-//                                       NotificationManager nm = getSystemService(NotificationManager.class);
-//
-//                                       if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
-//                                           NotificationChannel nc = new NotificationChannel("my_id", "added product" , NotificationManager.IMPORTANCE_HIGH);
-//                                           nm.createNotificationChannel(nc);
-//                                       }
-//                                       NotificationCompat.Builder builder = new NotificationCompat.Builder(addcolthes.this,"my_id");
+                                       Intent notificationIntent = new Intent(getApplicationContext(), addcolthes.class);
+                                       PendingIntent pendingIntent = PendingIntent.getActivity(getApplicationContext(), 0, notificationIntent, 0);
+
+                                       //Build the Notification
+                                       NotificationManager nm = getSystemService(NotificationManager.class);
+
+                                       if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){ NotificationChannel nc = new NotificationChannel("my_id", "added product" , NotificationManager.IMPORTANCE_HIGH);
+                                         nm.createNotificationChannel(nc);
+                                       }
+                                      NotificationCompat.Builder builder = new NotificationCompat.Builder(addcolthes.this,"my_id");
 
                                        String name1 = name.getText().toString();
                                        String price1 = price.getText().toString();
@@ -83,13 +83,13 @@ public  static  final  int PICK_IMAGE=1021;
                                        } else if (price1.isEmpty()) {
                                            price.setError("price not be empty");
                                        }
-//                                       else {
-//                                           builder.setContentTitle(name.getText().toString());
-//                                           builder.setContentText(price.getText().toString());
-//                                           builder.setSmallIcon(R.drawable.ic_baseline_send_24);
-//
-//                                           nm.notify(new Random().nextInt(), builder.build());
-//                                       }
+                                      else {
+                                          builder.setContentTitle(name.getText().toString());
+                                          builder.setContentText(price.getText().toString());
+                                          builder.setSmallIcon(R.drawable.ic_baseline_send_24);
+
+                                          nm.notify(new Random().nextInt(), builder.build());
+                                      }
 
                                        String name2 = name.getText().toString();
                                        String price2 = price.getText().toString();
