@@ -34,10 +34,11 @@ public class add extends AppCompatActivity {
         if(id==R.id.home){
             Intent intent=new Intent(getApplicationContext(), adminCategories.class);
             startActivity(intent);
-
+finish();
         }else if(id==R.id.addcoltes){
             Intent intent=new Intent(getApplicationContext(), addcolthes.class);
             startActivity(intent);
+            finish();
         }
 
         return super.onOptionsItemSelected(item);

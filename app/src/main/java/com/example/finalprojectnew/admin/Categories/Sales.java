@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.finalprojectnew.Class.PriceClas;
@@ -23,11 +25,12 @@ import java.util.ArrayList;
 
 public class Sales extends AppCompatActivity {
      ArrayList<PriceClas> data1=new ArrayList<>();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sales);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         FirebaseDatabase db=FirebaseDatabase.getInstance();
         DatabaseReference ref=db.getReference("Payer");
         Task<DataSnapshot> task=ref.get();
@@ -52,5 +55,5 @@ public class Sales extends AppCompatActivity {
             }
         });
 
-    }
+          }
 }

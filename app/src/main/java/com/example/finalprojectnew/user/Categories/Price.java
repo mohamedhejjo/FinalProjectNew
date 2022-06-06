@@ -52,7 +52,7 @@ String id;
                 i.putExtra("name",csp.getName());
                 i.putExtra("id",csp.getId());
                 startActivity(i);
-
+                finish();
             }
         });
 

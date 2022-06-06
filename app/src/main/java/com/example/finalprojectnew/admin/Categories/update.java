@@ -29,11 +29,11 @@ public class update extends AppCompatActivity {
         int id=item.getItemId();
         if(id==R.id.homeupdate){
             Intent intent=new Intent(getApplicationContext(), adminCategories.class);
-            startActivity(intent);
+            startActivity(intent);finish();
 
         }else if(id==R.id.updatecoltes){
             Intent intent=new Intent(getApplicationContext(), Updatecolthes.class);
-            startActivity(intent);
+            startActivity(intent);finish();
         }
 
         return super.onOptionsItemSelected(item);

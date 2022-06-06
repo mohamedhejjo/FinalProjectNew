@@ -87,5 +87,9 @@
     <string name="Payer">Payer</string>
     <string name="nomducompte">account number</string>
     <string name="sales">sales</string>
+    <string name="Finish">Finish</string>
+    <string name="pricefinal">Account details</string>
+    <string name="piggybank">piggy bank</string>
+
 
 </resources>

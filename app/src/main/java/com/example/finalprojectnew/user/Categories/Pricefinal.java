@@ -30,6 +30,7 @@ public class Pricefinal extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         setContentView(R.layout.pricefinal);
        namepr=findViewById(R.id.acol12);
         passpr=findViewById(R.id.acol3);
@@ -87,6 +88,7 @@ Product1.setText(Product);
                         }
                     });
                 }
+                finish();
         }});
     }
 }

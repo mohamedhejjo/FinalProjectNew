@@ -11,21 +11,31 @@
         android:theme="@style/Theme.FinalProjectNew">
         <activity
             android:name=".admin.Categories.Sales"
-            android:exported="false" />
+            android:label="@string/sales"
+            android:exported="false"
+            android:parentActivityName=".user.Categories.Pricefinal"/>
         <activity
             android:name=".user.Categories.Pricefinal"
-            android:exported="false" />
+            android:label="@string/pricefinal"
+            android:exported="false"
+            android:parentActivityName=".user.Categories.Price"
+            />
         <activity
             android:name=".admin.Categories.Updatecolthes"
-            android:exported="false" />
+            android:label="@string/Updateclothes"
+            android:exported="false"
+            android:parentActivityName=".admin.Categories.update"
+            />
         <activity
             android:name=".Finish"
-            android:exported="false" />
+            android:label="@string/Finish"
+            android:exported="false"
+            android:parentActivityName=".user.Categories.Pricefinal"/>
         <activity
             android:name=".user.Categories.Price"
             android:exported="false"
             android:label="@string/price1"
-            android:parentActivityName=".user.Categories.Price" />
+            android:parentActivityName=".user.Categories.clothes" />
         <activity
             android:name=".user.Categories.activityuserfinal"
             android:exported="false"
@@ -45,11 +55,6 @@
             android:name=".admin.Colthesa.Updateprofinalcolthes"
             android:exported="false"
             android:label="@string/app_name11"
-            android:parentActivityName=".admin.Categories.update" />
-        <activity
-            android:name=".admin.Colthesa.Updatedevice"
-            android:exported="false"
-            android:label="@string/app_name9"
             android:parentActivityName=".admin.Categories.update" />
         <activity
             android:name=".admin.Colthesa.addcolthes"
