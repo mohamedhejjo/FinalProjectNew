@@ -37,7 +37,7 @@
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:inputType="textWebEmailAddress"
-            android:maxLength="20" />
+            android:maxLength="40" />
     </com.google.android.material.textfield.TextInputLayout>
 
 
