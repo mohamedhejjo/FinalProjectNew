@@ -1,6 +1,7 @@
 package com.example.finalprojectnew.Recyviewsales;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.example.finalprojectnew.Class.PriceClas;
 import com.example.finalprojectnew.R;
+import com.example.finalprojectnew.admin.Categories.Salesfinal;
 
 import java.util.ArrayList;
 
@@ -39,8 +41,9 @@ public class Adaptersales extends RecyclerView.Adapter<holdersales> {
         holder.view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-
+                Intent intent=new Intent(context, Salesfinal.class);
+                intent.putExtra("price",csp);
+                context.startActivity(intent);
             }   });
     }
 

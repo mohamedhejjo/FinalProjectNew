@@ -62,7 +62,7 @@ public class Pricefinal extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             if (task.isSuccessful()) {
-                                Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_SHORT).show();
+//                                Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_SHORT).show();
                                 Intent intent1=new Intent(getBaseContext(), Finish.class);
                                 startActivity(intent1);
                                 FirebaseDatabase db=FirebaseDatabase.getInstance();
@@ -70,11 +70,11 @@ public class Pricefinal extends AppCompatActivity {
                                 dr.child(id).removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
                                     @Override
                                     public void onComplete(@NonNull Task<Void> task) {
-                                        if (task.isSuccessful()){
-                                            Toast.makeText(getApplicationContext(), "sold", Toast.LENGTH_SHORT).show();
-                                        }else{
-                                            Toast.makeText(getApplicationContext(), "not sold", Toast.LENGTH_SHORT).show();
-                                        }
+//                                        if (task.isSuccessful()){
+//                                            Toast.makeText(getApplicationContext(), "sold", Toast.LENGTH_SHORT).show();
+//                                        }else{
+//                                            Toast.makeText(getApplicationContext(), "not sold", Toast.LENGTH_SHORT).show();
+//                                        }
                                     }
                                 });
                             } else {

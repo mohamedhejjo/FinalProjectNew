@@ -36,6 +36,7 @@
             android:id="@+id/uuser1"
             android:layout_width="match_parent"
             android:layout_height="65dp"
+            android:inputType="text"
             android:maxLength="20" />
     </com.google.android.material.textfield.TextInputLayout>
 

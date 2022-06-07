@@ -137,6 +137,9 @@ public class addcolthes extends AppCompatActivity {
                                                         }
                                                         name.setText("");
                                                         price.setText("");
+                                                        addimage.setImageResource(R.drawable.ic_launcher_background);
+                                                        selected1.isEmpty();
+                                                        selected2.isEmpty();
 
                                                     }
                                                 });

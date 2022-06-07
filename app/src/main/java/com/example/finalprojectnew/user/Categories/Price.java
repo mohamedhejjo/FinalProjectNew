@@ -12,12 +12,15 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.finalprojectnew.Class.Admin;
+import com.example.finalprojectnew.Class.PriceClas;
 import com.example.finalprojectnew.Class.Product;
 import com.example.finalprojectnew.Finish;
 import com.example.finalprojectnew.R;
 import com.example.finalprojectnew.admin.Colthesa.deletecolthes;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -37,13 +40,10 @@ String id;
         ImageView image=findViewById(R.id.imageprice);
         Intent intent=getIntent();
         Product csp=(Product)intent.getSerializableExtra("finalu");
-        String imagei=csp.getImage().toString();
-
         name.setText(csp.getName());
         id=csp.getId();
         price.setText(csp.getPrice());
         pro.setText(csp.getProduct());
-        image.setImageURI(Uri.parse(csp.getImage()));
         female.setText(csp.getSex());
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,5 +60,4 @@ String id;
         });
 
 
-    }
-}
+    }}

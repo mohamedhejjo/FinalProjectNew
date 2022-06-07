@@ -103,6 +103,7 @@ public class Updateprofinalcolthes extends AppCompatActivity {
                                                         }
                                                         name.setText("");
                                                         price.setText("");
+                                                        addimage.setImageResource(R.drawable.ic_launcher_background);
                                                     }
                                                 });
                                             }

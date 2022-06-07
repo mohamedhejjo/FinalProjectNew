@@ -10,27 +10,30 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FinalProjectNew">
         <activity
-            android:name=".admin.Categories.Sales"
-            android:label="@string/sales"
+            android:name=".admin.Categories.Salesfinal"
             android:exported="false"
-            android:parentActivityName=".user.Categories.Pricefinal"/>
+            android:label="@string/salefinal"
+            android:parentActivityName=".admin.adminCategories"/>
+        <activity
+            android:name=".admin.Categories.Sales"
+            android:exported="false"
+            android:label="@string/sales"
+            android:parentActivityName=".user.Categories.Pricefinal" />
         <activity
             android:name=".user.Categories.Pricefinal"
-            android:label="@string/pricefinal"
             android:exported="false"
-            android:parentActivityName=".user.Categories.clothes"
-            />
+            android:label="@string/pricefinal"
+            android:parentActivityName=".user.Categories.clothes" />
         <activity
             android:name=".admin.Categories.Updatecolthes"
-            android:label="@string/Updateclothes"
             android:exported="false"
-            android:parentActivityName=".admin.Categories.update"
-            />
+            android:label="@string/Updateclothes"
+            android:parentActivityName=".admin.Categories.update" />
         <activity
             android:name=".Finish"
-            android:label="@string/Finish"
             android:exported="false"
-            android:parentActivityName=".user.Categories.Pricefinal"/>
+            android:label="@string/Finish"
+            android:parentActivityName=".user.Categories.Pricefinal" />
         <activity
             android:name=".user.Categories.Price"
             android:exported="false"

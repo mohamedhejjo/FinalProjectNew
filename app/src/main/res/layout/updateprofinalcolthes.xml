@@ -91,6 +91,7 @@
             android:id="@+id/ufco1"
             android:layout_width="match_parent"
             android:layout_height="60dp"
+            android:inputType="text"
             android:maxLength="20" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -118,6 +119,7 @@
             android:id="@+id/ufco2"
             android:layout_width="match_parent"
             android:layout_height="60dp"
+            android:inputType="number"
             android:maxLength="20" />
     </com.google.android.material.textfield.TextInputLayout>
 
