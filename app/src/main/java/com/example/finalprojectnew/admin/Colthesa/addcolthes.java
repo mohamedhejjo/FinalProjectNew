@@ -88,8 +88,8 @@ public class addcolthes extends AppCompatActivity {
                 } else if (price1.isEmpty()) {
                     price.setError("price not be empty");
                 } else {
-                    builder.setContentTitle(name.getText().toString());
-                    builder.setContentText(price.getText().toString());
+                    builder.setContentTitle("Product added:\n"+name.getText().toString());
+                    builder.setContentText("price:"+price.getText().toString());
                     builder.setSmallIcon(R.drawable.ic_baseline_send_24);
 
                     nm.notify(new Random().nextInt(), builder.build());
