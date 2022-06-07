@@ -38,8 +38,9 @@ public class Adapterdelete extends RecyclerView.Adapter<Holderdelete> {
     public void onBindViewHolder(@NonNull Holderdelete holder, int position) {
         Product csp=data.get(position);
         holder.name.setText(csp.getName());
-        Glide.with(holder.itemView).load(csp.getImage()).into(holder.image);
-        holder.price.setText(csp.getPrice());
+        if (!csp.getImage().isEmpty()) {
+            Glide.with(holder.itemView).load(csp.getImage()).into(holder.image);
+        }        holder.price.setText(csp.getPrice());
         holder.pro.setText(csp.getProduct());
         holder.female.setText(csp.getSex());
         holder.view.setOnClickListener(new View.OnClickListener() {

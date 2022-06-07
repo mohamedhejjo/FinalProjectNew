@@ -2,10 +2,12 @@ package com.example.finalprojectnew.user.Categories;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.example.finalprojectnew.Class.PriceClas;
@@ -21,6 +23,7 @@ public class Pricefinal extends AppCompatActivity {
     EditText namepr;
     EditText passpr;
     TextView price1,Product1;
+    ImageView image1;
     Button btn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,12 +35,15 @@ public class Pricefinal extends AppCompatActivity {
         btn=findViewById(R.id.addcreate);
         price1=findViewById(R.id.priceprice);
         Product1=findViewById(R.id.pricepro);
+        image1=findViewById(R.id.imageprice);
         Intent intent=getIntent();
         String id=intent.getStringExtra("id");
         String price=intent.getStringExtra("price");
         String Product=intent.getStringExtra("product");
+        String image=intent.getStringExtra("image");
         price1.setText(price);
         Product1.setText(Product);
+        image1.setImageURI(Uri.parse(image));
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -52,7 +58,7 @@ public class Pricefinal extends AppCompatActivity {
                     FirebaseDatabase db = FirebaseDatabase.getInstance();
                     DatabaseReference dr = db.getReference("Payer");
                     String id1 = dr.push().getKey();
-                    PriceClas product = new PriceClas(id1, namepr1, passpr1, Product,  price);
+                    PriceClas product = new PriceClas(id1, namepr1, passpr1, Product,  price,image);
                     dr.child(id1).setValue(product).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {

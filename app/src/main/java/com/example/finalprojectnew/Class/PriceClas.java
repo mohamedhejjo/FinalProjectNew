@@ -21,6 +21,16 @@ public class PriceClas implements Serializable {
     public PriceClas(){
 
     }
+
+    public PriceClas(String id, String namepyar, String passpyar, String name, String price, String image) {
+        this.id = id;
+        this.namepyar = namepyar;
+        this.passpyar = passpyar;
+        this.name = name;
+        this.price = price;
+        this.image = image;
+    }
+
     public PriceClas(String id, String namepyar, String passpyar, String name, String price) {
         this.id = id;
         this.namepyar = namepyar;

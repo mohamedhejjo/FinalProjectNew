@@ -40,8 +40,9 @@ public class Adapterfinaluser  extends RecyclerView.Adapter<HolderShowPrice> {
         holder.price.setText(finalu.getPrice());
         holder.pro.setText(finalu.getProduct());
         holder.female.setText(finalu.getSex());
-        Glide.with(holder.itemView).load(finalu.getImage()).into(holder.image);
-        holder.view.setOnClickListener(new View.OnClickListener() {
+        if (!finalu.getImage().isEmpty()) {
+            Glide.with(holder.itemView).load(finalu.getImage()).into(holder.image);
+        }  holder.view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(context, Price.class);

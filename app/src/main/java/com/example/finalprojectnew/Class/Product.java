@@ -2,8 +2,6 @@ package com.example.finalprojectnew.Class;
 
 import android.net.Uri;
 
-import com.google.firebase.database.DataSnapshot;
-
 import java.io.Serializable;
 
 public class Product implements Serializable {

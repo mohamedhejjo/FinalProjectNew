@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -22,7 +23,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class Price extends AppCompatActivity {
 String id;
-    Product csp;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,11 +37,13 @@ String id;
         ImageView image=findViewById(R.id.imageprice);
         Intent intent=getIntent();
         Product csp=(Product)intent.getSerializableExtra("finalu");
+        String imagei=csp.getImage().toString();
+
         name.setText(csp.getName());
         id=csp.getId();
         price.setText(csp.getPrice());
         pro.setText(csp.getProduct());
-//        image.setImageResource(csp.getImage());
+        image.setImageURI(Uri.parse(csp.getImage()));
         female.setText(csp.getSex());
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,6 +54,7 @@ String id;
                 i.putExtra("product",csp.getProduct());
                 i.putExtra("name",csp.getName());
                 i.putExtra("id",csp.getId());
+                i.putExtra("image",csp.getImage());
                 startActivity(i);
             }
         });

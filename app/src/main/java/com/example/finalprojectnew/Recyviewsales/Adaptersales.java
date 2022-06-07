@@ -32,8 +32,9 @@ public class Adaptersales extends RecyclerView.Adapter<holdersales> {
     @Override
     public void onBindViewHolder(@NonNull holdersales holder, int position) {
         PriceClas csp=data.get(position);
-       // Glide.with(holder.itemView).load(csp.getImage()).into(holder.imageView);
-        holder.price.setText(csp.getPrice());
+        if (!csp.getImage().isEmpty()) {
+            Glide.with(holder.itemView).load(csp.getImage()).into(holder.imageView);
+        }        holder.price.setText(csp.getPrice());
         holder.name.setText(csp.getName());
         holder.view.setOnClickListener(new View.OnClickListener() {
             @Override

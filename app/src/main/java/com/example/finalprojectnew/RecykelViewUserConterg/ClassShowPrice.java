@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 public class ClassShowPrice implements Serializable {
     private String name;
-    private int image;
+    private String image;
     private String price;
     private String pro;
 private String femal;
@@ -24,12 +24,12 @@ private String femal;
     public void setPro(String pro) {
         this.pro = pro;
     }
-    public ClassShowPrice(String name, int image, String price,String pro) {
+    public ClassShowPrice(String name, String image, String price,String pro) {
         this.name = name;
         this.image = image;
         this.pro = pro;
         this.price = price;}
-    public ClassShowPrice(String name, int image, String price,String pro,String femal) {
+    public ClassShowPrice(String name, String image, String price,String pro,String femal) {
         this.name = name;
         this.image = image;
         this.price = price;
@@ -45,11 +45,11 @@ private String femal;
         this.name = name;
     }
 
-    public int getImage() {
+    public String getImage() {
         return image;
     }
 
-    public void setImage(int image) {
+    public void setImage(String image) {
         this.image = image;
     }
 
