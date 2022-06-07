@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -18,6 +19,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.target.Target;
 import com.example.finalprojectnew.Class.Product;
 import com.example.finalprojectnew.R;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -56,7 +59,6 @@ public class Updateprofinalcolthes extends AppCompatActivity {
         update=findViewById(R.id.Updatecreate);
         Intent intent=getIntent();
         Product csp=(Product)intent.getSerializableExtra("productupdate");
-
 //        addimage.setImageURI(equals(csp.getImage()));
         name.setText(csp.getName());
         price.setText(""+csp.getPrice()+"$");
@@ -73,7 +75,7 @@ public class Updateprofinalcolthes extends AppCompatActivity {
                 else {
                     if (selectedimage != null) {
                         FirebaseStorage storage=FirebaseStorage.getInstance();
-                        StorageReference ref=storage.getReference("images/"+ UUID.randomUUID().toString());
+                        StorageReference ref=storage.getReference("images/"+ id+selected2);
                         ref.putFile(selectedimage).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
                             @Override
                             public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {

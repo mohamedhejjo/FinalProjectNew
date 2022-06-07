@@ -48,12 +48,13 @@ public class Price extends AppCompatActivity {
         Product csp=(Product)intent.getSerializableExtra("finalu");
         name.setText(csp.getName());
         id=csp.getId();
+
         price.setText(csp.getPrice());
         pro.setText(csp.getProduct());
         female.setText(csp.getSex());
         ///////////////
         FirebaseStorage fs=FirebaseStorage.getInstance();
-        StorageReference sr=fs.getReference().child("images/"+id);
+        StorageReference sr=fs.getReference().child("images/"+id+csp.getProduct());
         int Mohamed=1024*1024;
         sr.getBytes(Mohamed).addOnSuccessListener(new OnSuccessListener<byte[]>() {
             @Override
