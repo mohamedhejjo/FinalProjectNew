@@ -43,7 +43,6 @@ public class Pricefinal extends AppCompatActivity {
         String image=intent.getStringExtra("image");
         price1.setText(price);
         Product1.setText(Product);
-        image1.setImageURI(Uri.parse(image));
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -58,7 +57,7 @@ public class Pricefinal extends AppCompatActivity {
                     FirebaseDatabase db = FirebaseDatabase.getInstance();
                     DatabaseReference dr = db.getReference("Payer");
                     String id1 = dr.push().getKey();
-                    PriceClas product = new PriceClas(id1, namepr1, passpr1, Product,  price,image);
+                    PriceClas product = new PriceClas(id1, namepr1, passpr1, Product,  price,"image");
                     dr.child(id1).setValue(product).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
@@ -86,7 +85,6 @@ public class Pricefinal extends AppCompatActivity {
                         }
                     });
                 }
-                finish();
             }});
     }
 }
