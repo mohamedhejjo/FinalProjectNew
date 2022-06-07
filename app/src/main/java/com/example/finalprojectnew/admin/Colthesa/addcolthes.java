@@ -110,8 +110,11 @@ public class addcolthes extends AppCompatActivity {
                     price.setError("price not be empty");
                 } else {
                     if (selectedimage != null) {
+                        FirebaseDatabase db = FirebaseDatabase.getInstance();
+                        DatabaseReference dr = db.getReference("addcolthes");
+                        String id = dr.push().getKey();
                         FirebaseStorage fs = FirebaseStorage.getInstance();
-                        StorageReference storageReference = fs.getReference("images/" + UUID.randomUUID().toString());
+                        StorageReference storageReference = fs.getReference("images/" + id);
                         storageReference.putFile(selectedimage).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
                             @Override
                             public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
@@ -121,10 +124,6 @@ public class addcolthes extends AppCompatActivity {
                                         public void onComplete(@NonNull Task<Uri> task) {
                                             if (task.isSuccessful()) {
                                                 String imageurl = task.getResult().toString();
-
-                                                FirebaseDatabase db = FirebaseDatabase.getInstance();
-                                                DatabaseReference dr = db.getReference("addcolthes");
-                                                String id = dr.push().getKey();
                                                 Product product = new Product(id, name1, price1, selected1, imageurl, selected2);
                                                 dr.child(id).setValue(product).addOnCompleteListener(new OnCompleteListener<Void>() {
                                                     @Override

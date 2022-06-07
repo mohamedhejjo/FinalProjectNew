@@ -4,6 +4,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -17,9 +19,13 @@ import com.example.finalprojectnew.R;
 import com.example.finalprojectnew.admin.Colthesa.deletecolthes;
 import com.example.finalprojectnew.user.Categories.Pricefinal;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 public class Salesfinal extends AppCompatActivity {
 ImageView imageView;
@@ -41,6 +47,21 @@ String id1;
         product.setText(csp.getName());
         id1=csp.getId();
 
+        FirebaseStorage fs=FirebaseStorage.getInstance();
+        StorageReference sr=fs.getReference().child(csp.getImage());
+        int Mohamed=1024*1024;
+        sr.getBytes(Mohamed).addOnSuccessListener(new OnSuccessListener<byte[]>() {
+            @Override
+            public void onSuccess(byte[] bytes) {
+                Bitmap bitmap= BitmapFactory.decodeByteArray(bytes,0,bytes.length);
+                imageView.setImageBitmap(bitmap);
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+
+            }
+        });
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
@@ -62,6 +83,7 @@ String id1;
                 @Override
                 public void onComplete(@NonNull Task<Void> task) {
                     if (task.isSuccessful()){
+
                         Intent intent = new Intent(getApplicationContext(), Sales.class);
                         startActivity(intent);
                         Toast.makeText(getApplicationContext(), "delete", Toast.LENGTH_SHORT).show();

@@ -2,6 +2,8 @@ package com.example.finalprojectnew.user.Categories;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -15,9 +17,14 @@ import com.example.finalprojectnew.Class.Product;
 import com.example.finalprojectnew.Finish;
 import com.example.finalprojectnew.R;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+
 import javax.xml.parsers.FactoryConfigurationError;
 public class Pricefinal extends AppCompatActivity {
     EditText namepr;
@@ -25,6 +32,7 @@ public class Pricefinal extends AppCompatActivity {
     TextView price1,Product1;
     ImageView image1;
     Button btn;
+    String url;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,9 +48,25 @@ public class Pricefinal extends AppCompatActivity {
         String id=intent.getStringExtra("id");
         String price=intent.getStringExtra("price");
         String Product=intent.getStringExtra("product");
-        String image=intent.getStringExtra("image");
         price1.setText(price);
         Product1.setText(Product);
+        /////////////////
+        FirebaseStorage fs=FirebaseStorage.getInstance();
+        StorageReference sr=fs.getReference().child("images/"+id);
+        int Mohamed=1024*1024;
+        sr.getBytes(Mohamed).addOnSuccessListener(new OnSuccessListener<byte[]>() {
+            @Override
+            public void onSuccess(byte[] bytes) {
+                Bitmap bitmap= BitmapFactory.decodeByteArray(bytes,0,bytes.length);
+                image1.setImageBitmap(bitmap);
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+
+            }
+        });
+        ///////////////////
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -54,10 +78,11 @@ public class Pricefinal extends AppCompatActivity {
                     passpr.setError("passPayer not be empty");
                 }
                 else {
+                    url="images/"+id;
                     FirebaseDatabase db = FirebaseDatabase.getInstance();
                     DatabaseReference dr = db.getReference("Payer");
                     String id1 = dr.push().getKey();
-                    PriceClas product = new PriceClas(id1, namepr1, passpr1, Product,  price,"image");
+                    PriceClas product = new PriceClas(id1, namepr1, passpr1, Product,  price,url);
                     dr.child(id1).setValue(product).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
