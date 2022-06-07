@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.example.finalprojectnew.R;
 import com.example.finalprojectnew.RecykelViewuser.AdapterCotr;
@@ -23,8 +24,8 @@ public class userCategories extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.user_categories);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        Button btn=findViewById(R.id.addcreate);
-        btn.setOnClickListener(new View.OnClickListener() {
+        ImageButton next3 = findViewById(R.id.next3);
+        next3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent =new Intent(getBaseContext(), clothes.class);
