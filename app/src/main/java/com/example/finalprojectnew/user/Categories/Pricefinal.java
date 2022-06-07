@@ -50,7 +50,7 @@ public class Pricefinal extends AppCompatActivity {
         String Product=intent.getStringExtra("product");
         price1.setText(price);
         Product1.setText(Product);
-        /////////////////
+        //////////////////
         FirebaseStorage fs=FirebaseStorage.getInstance();
         StorageReference sr=fs.getReference().child("images/"+id+Product);
         int Mohamed=1024*1024;
