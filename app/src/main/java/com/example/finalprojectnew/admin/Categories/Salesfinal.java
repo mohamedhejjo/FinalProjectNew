@@ -46,7 +46,7 @@ String id1;
         price.setText(csp.getPrice());
         product.setText(csp.getName());
         id1=csp.getId();
-
+String nameeeee;
         FirebaseStorage fs=FirebaseStorage.getInstance();
         StorageReference sr=fs.getReference().child(csp.getImage());
         int Mohamed=1024*1024;
