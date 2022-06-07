@@ -12,6 +12,7 @@ import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -25,6 +26,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.finalprojectnew.Class.Product;
+import com.example.finalprojectnew.MainActivity;
 import com.example.finalprojectnew.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -92,6 +94,11 @@ public class addcolthes extends AppCompatActivity {
                     builder.setContentText("price:"+price.getText().toString());
                     builder.setSmallIcon(R.drawable.ic_baseline_send_24);
 
+                    Intent i = new Intent(addcolthes.this, MainActivity.class);
+                    PendingIntent pi = PendingIntent.getActivity(addcolthes.this,1021,i,PendingIntent.FLAG_UPDATE_CURRENT);
+                    builder.setContentIntent(pi);
+                    builder.setColor(Color.BLUE);
+                    builder.setColorized(true);
                     nm.notify(new Random().nextInt(), builder.build());
                 }
 
