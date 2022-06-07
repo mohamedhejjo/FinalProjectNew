@@ -52,7 +52,7 @@ public class Pricefinal extends AppCompatActivity {
         Product1.setText(Product);
         /////////////////
         FirebaseStorage fs=FirebaseStorage.getInstance();
-        StorageReference sr=fs.getReference().child("images/"+id);
+        StorageReference sr=fs.getReference().child("images/"+id+Product);
         int Mohamed=1024*1024;
         sr.getBytes(Mohamed).addOnSuccessListener(new OnSuccessListener<byte[]>() {
             @Override
@@ -78,7 +78,7 @@ public class Pricefinal extends AppCompatActivity {
                     passpr.setError("passPayer not be empty");
                 }
                 else {
-                    url="images/"+id;
+                    url="images/"+id+Product;
                     FirebaseDatabase db = FirebaseDatabase.getInstance();
                     DatabaseReference dr = db.getReference("Payer");
                     String id1 = dr.push().getKey();
@@ -92,16 +92,16 @@ public class Pricefinal extends AppCompatActivity {
                                 startActivity(intent1);
                                 FirebaseDatabase db=FirebaseDatabase.getInstance();
                                 DatabaseReference dr = db.getReference("addcolthes");
-                                dr.child(id).removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
-                                    @Override
-                                    public void onComplete(@NonNull Task<Void> task) {
+//                                dr.child(id).removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
+//                                    @Override
+//                                    public void onComplete(@NonNull Task<Void> task) {
 //                                        if (task.isSuccessful()){
 //                                            Toast.makeText(getApplicationContext(), "sold", Toast.LENGTH_SHORT).show();
 //                                        }else{
 //                                            Toast.makeText(getApplicationContext(), "not sold", Toast.LENGTH_SHORT).show();
 //                                        }
-                                    }
-                                });
+//                                    }
+//                                });
                             } else {
                                 Toast.makeText(getApplicationContext(), "Failed", Toast.LENGTH_SHORT).show();
                             }

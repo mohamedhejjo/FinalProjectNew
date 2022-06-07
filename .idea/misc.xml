@@ -25,6 +25,7 @@
         <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/activity_finish.xml" value="0.15806159420289856" />
         <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/activity_sales.xml" value="0.1897644927536232" />
+        <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/activity_salesfinal.xml" value="0.1" />
         <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/activity_welcome.xml" value="0.25" />
         <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/activityuserfinal.xml" value="0.1" />
         <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/add.xml" value="0.1" />
@@ -51,7 +52,7 @@
         <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/fragmentuser_update.xml" value="0.1" />
         <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/fragmentuserlogin.xml" value="0.1" />
         <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/itemde.xml" value="0.1" />
-        <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/itemshowprice.xml" value="0.1" />
+        <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/itemshowprice.xml" value="0.22" />
         <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/mainadmin.xml" value="0.1" />
         <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/mainuser.xml" value="0.1" />
         <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/price.xml" value="0.22" />
@@ -88,9 +89,11 @@
         <entry key="..\:/new project androud1111/app/src/main/res/drawable/ic_baseline_add_circle_outline_24.xml" value="0.112" />
         <entry key="..\:/new project androud1111/app/src/main/res/drawable/ic_replay.xml" value="0.112" />
         <entry key="..\:/new project androud1111/app/src/main/res/layout/activity_finish.xml" value="0.1816123188405797" />
+        <entry key="..\:/new project androud1111/app/src/main/res/layout/deletefinal.xml" value="0.2006340579710145" />
         <entry key="..\:/new project androud1111/app/src/main/res/layout/itemde.xml" value="0.1816123188405797" />
         <entry key="..\:/new project androud1111/app/src/main/res/layout/itemshowprice.xml" value="0.1816123188405797" />
         <entry key="..\:/new project androud1111/app/src/main/res/layout/price.xml" value="0.1816123188405797" />
+        <entry key="..\:/new project androud1111/app/src/main/res/layout/pricefinal.xml" value="0.2006340579710145" />
         <entry key="..\:/new project androud1111/app/src/main/res/layout/salesitem.xml" value="0.1816123188405797" />
       </map>
     </option>

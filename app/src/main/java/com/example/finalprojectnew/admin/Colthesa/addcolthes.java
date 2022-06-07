@@ -114,7 +114,7 @@ public class addcolthes extends AppCompatActivity {
                         DatabaseReference dr = db.getReference("addcolthes");
                         String id = dr.push().getKey();
                         FirebaseStorage fs = FirebaseStorage.getInstance();
-                        StorageReference storageReference = fs.getReference("images/" + id);
+                        StorageReference storageReference = fs.getReference("images/" + id+selected2);
                         storageReference.putFile(selectedimage).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
                             @Override
                             public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {

@@ -4,6 +4,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -16,9 +18,13 @@ import com.example.finalprojectnew.Class.Product;
 import com.example.finalprojectnew.R;
 import com.example.finalprojectnew.admin.adminCategories;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 public class deletefinal extends AppCompatActivity {
 
@@ -33,7 +39,21 @@ public class deletefinal extends AppCompatActivity {
         TextView Name=findViewById(R.id.nameuserdelete);
         TextView price=findViewById(R.id.priceuserdelete);
         TextView pro=findViewById(R.id.prouserdelete);
-//        imag.setImageURI(csp.getImage());
+        FirebaseStorage fs=FirebaseStorage.getInstance();
+        StorageReference sr=fs.getReference().child("images/"+csp.getId()+csp.getProduct());
+        int Mohamed=1024*1024;
+        sr.getBytes(Mohamed).addOnSuccessListener(new OnSuccessListener<byte[]>() {
+            @Override
+            public void onSuccess(byte[] bytes) {
+                Bitmap bitmap= BitmapFactory.decodeByteArray(bytes,0,bytes.length);
+                imag.setImageBitmap(bitmap);
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+
+            }
+        });
         Name.setText(csp.getName());
         price.setText(""+csp.getPrice()+"$");
         pro.setText(csp.getProduct());

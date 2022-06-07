@@ -29,20 +29,27 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:background="@drawable/shape_corner"
-                android:backgroundTint="@color/color_bg_CC"
-                android:foreground="@drawable/design_header"
+                android:backgroundTint="@color/teal_200"
+                android:foreground="@drawable/design_header3"
 
                 android:orientation="vertical">
 
-                <de.hdodenhof.circleimageview.CircleImageView
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_margin="30dp"
+                    app:cardCornerRadius="100dp"
+                  >
 
-                    android:id="@+id/imageuser"
-                    android:layout_width="350dp"
-                    android:layout_height="220dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/male"
-                    app:civ_border_width="3dp" />
+                    <ImageView
+                        android:id="@+id/imageuser"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_launcher_background" />
+                </androidx.cardview.widget.CardView>
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -59,6 +66,8 @@
                         android:layout_weight="1"
                         android:gravity="center"
                         android:text="exmple "
+                        android:fontFamily="@font/stronggirls_demo"
+
                         android:textColor="@color/black"
                         android:textSize="20sp"
                         android:textStyle="bold">
@@ -82,6 +91,8 @@
                         android:layout_weight="1"
                         android:gravity="center"
                         android:text="exmple "
+                        android:fontFamily="@font/stronggirls_demo"
+
                         android:textColor="@color/black"
                         android:textSize="20sp"
                         android:textStyle="bold">
@@ -104,6 +115,8 @@
                         android:layout_weight="1"
                         android:gravity="center"
                         android:text="exmple "
+                        android:fontFamily="@font/stronggirls_demo"
+
                         android:textColor="@color/black"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -119,7 +132,9 @@
                     android:text="exmple "
                     android:textColor="@color/black"
                     android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:layout_marginBottom="30dp"
+                        android:fontFamily="@font/stronggirls_demo"
+               />
 
 
             </LinearLayout>
