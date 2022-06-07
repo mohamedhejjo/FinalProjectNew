@@ -56,7 +56,7 @@ public class Adaptersales extends RecyclerView.Adapter<holdersales> {
             }
         });
 
-       holder.price.setText(csp.getPrice());
+        holder.price.setText(csp.getPrice());
         holder.name.setText(csp.getName());
         holder.view.setOnClickListener(new View.OnClickListener() {
             @Override

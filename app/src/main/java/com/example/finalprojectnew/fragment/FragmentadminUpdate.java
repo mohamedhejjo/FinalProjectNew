@@ -43,6 +43,7 @@ public class FragmentadminUpdate extends Fragment {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String srt ="@gmail.com";
                 String numberold1=numberold.getText().toString();
                 String passwordold1=passwordold.getText().toString();
                 String numbernew1=numbernew.getText().toString();
@@ -60,7 +61,10 @@ public class FragmentadminUpdate extends Fragment {
                     passwordnew.setError("passwordnew not be empty"); }
                 else if(email1.isEmpty()){
                     passwordnew.setError("email not be empty"); }
-                else {
+                else if (!email1.endsWith(srt.toString())){
+                    email.setError("cannot end with "+srt.toString());
+                    Toast.makeText(getContext(), "cannot end with "+srt.toString(), Toast.LENGTH_SHORT).show();
+                }else {
                     FirebaseDatabase db=FirebaseDatabase.getInstance();
                     DatabaseReference ref=db.getReference("Admin");
                     Task<DataSnapshot> task=ref.get();

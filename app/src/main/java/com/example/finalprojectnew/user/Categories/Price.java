@@ -31,7 +31,7 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
 public class Price extends AppCompatActivity {
-String id;
+    String id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,7 +59,7 @@ String id;
             @Override
             public void onSuccess(byte[] bytes) {
                 Bitmap bitmap= BitmapFactory.decodeByteArray(bytes,0,bytes.length);
-        image.setImageBitmap(bitmap);
+                image.setImageBitmap(bitmap);
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override

@@ -25,7 +25,6 @@
         <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/activity_finish.xml" value="0.15806159420289856" />
         <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/activity_sales.xml" value="0.1897644927536232" />
-        <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/activity_salesfinal.xml" value="0.2" />
         <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/activity_welcome.xml" value="0.25" />
         <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/activityuserfinal.xml" value="0.1" />
         <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/layout/add.xml" value="0.1" />
@@ -77,6 +76,22 @@
         <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/menu/price.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
         <entry key="..\:/Users/hp/FinalProjectNew/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1" />
+        <entry key="..\:/new project androud1111/app/src/main/res/drawable/abc.xml" value="0.112" />
+        <entry key="..\:/new project androud1111/app/src/main/res/drawable/baseline.xml" value="0.112" />
+        <entry key="..\:/new project androud1111/app/src/main/res/drawable/btnadmin.xml" value="0.112" />
+        <entry key="..\:/new project androud1111/app/src/main/res/drawable/design_header.xml" value="0.231" />
+        <entry key="..\:/new project androud1111/app/src/main/res/drawable/design_header2.xml" value="0.112" />
+        <entry key="..\:/new project androud1111/app/src/main/res/drawable/design_header3.xml" value="0.112" />
+        <entry key="..\:/new project androud1111/app/src/main/res/drawable/email.xml" value="0.112" />
+        <entry key="..\:/new project androud1111/app/src/main/res/drawable/fragmentuttoncaolor.xml" value="0.112" />
+        <entry key="..\:/new project androud1111/app/src/main/res/drawable/home.xml" value="0.112" />
+        <entry key="..\:/new project androud1111/app/src/main/res/drawable/ic_baseline_add_circle_outline_24.xml" value="0.112" />
+        <entry key="..\:/new project androud1111/app/src/main/res/drawable/ic_replay.xml" value="0.112" />
+        <entry key="..\:/new project androud1111/app/src/main/res/layout/activity_finish.xml" value="0.1816123188405797" />
+        <entry key="..\:/new project androud1111/app/src/main/res/layout/itemde.xml" value="0.1816123188405797" />
+        <entry key="..\:/new project androud1111/app/src/main/res/layout/itemshowprice.xml" value="0.1816123188405797" />
+        <entry key="..\:/new project androud1111/app/src/main/res/layout/price.xml" value="0.1816123188405797" />
+        <entry key="..\:/new project androud1111/app/src/main/res/layout/salesitem.xml" value="0.1816123188405797" />
       </map>
     </option>
   </component>

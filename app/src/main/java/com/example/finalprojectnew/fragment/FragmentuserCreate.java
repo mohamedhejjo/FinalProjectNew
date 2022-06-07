@@ -34,12 +34,17 @@ public class FragmentuserCreate extends Fragment {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String srt ="@gmail.com";
                 String email1=email.getText().toString();
                 String pass1=pass.getText().toString();
                 String name1=name.getText().toString();
-                if (email1.isEmpty()){
+                if (email1.isEmpty()) {
                     email.setError("email not be empty");
-                } else if(pass1.isEmpty()) {
+                }  else if (!email1.endsWith(srt.toString())){
+                        email.setError("cannot end with "+srt.toString());
+                        Toast.makeText(getContext(), "cannot end with "+srt.toString(), Toast.LENGTH_SHORT).show();
+
+                    } else if(pass1.isEmpty()) {
                     pass.setError("pass not be empty");}
                 else if(name1.isEmpty()) {
                     name.setError("name not be empty");}

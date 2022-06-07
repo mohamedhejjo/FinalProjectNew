@@ -41,13 +41,17 @@ public class Fragmentadminlogin extends Fragment {
         btnlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String srt ="@gmail.com";
                 String email1=email.getText().toString();
                 String password1=password.getText().toString();
                 if (email1.isEmpty()){
                     email.setError("can not be empty");  }
                 else if (password1.isEmpty()){
                     password.setError("can not be empty");  }
-else{
+else if (!email1.endsWith(srt.toString())){
+                    email.setError("cannot end with "+srt.toString());
+                    Toast.makeText(getContext(), "cannot end with "+srt.toString(), Toast.LENGTH_SHORT).show();
+                }else{
 
                         FirebaseDatabase db = FirebaseDatabase.getInstance();
                         DatabaseReference ref = db.getReference("Admin");
